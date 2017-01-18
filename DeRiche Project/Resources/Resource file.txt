@@ -1,0 +1,2 @@
+Put all files and jars needed for them to
+get the project up and running

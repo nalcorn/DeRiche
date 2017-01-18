@@ -1,0 +1,113 @@
+1) Login Test for Admin with a incorrect username
+Step 1: Enter username (adminn)
+Step 2: Enter passoard (password)
+An error should appear saying "The username or password you have entered is incorrect. Please Try Again."
+
+2) Login Test for DCP with an incorrect username
+Step 1: Enter username (DCPP)
+Step 2: Enter password (pass)
+An error should appear saying "The username or password you have entered is incorrect. Please Try Again."
+
+3) Login Test for Auditor with an incorrect username
+Step 1: Enter username (Auuditor)
+Step 2: Enter password (pass)
+An error should appear saying "The username or password you have entered is incorrect. Please Try Again."
+
+4) Login Test for Reviewer with an incorrect username
+Step 1: Enter username (Revieweer)
+Step 2: Enter password (pass)
+An error should appear saying "The username or password you have entered is incorrect. Please Try Again."
+
+5) Login Test for a Terminated Employee with an incorrect username
+Step 1: Enter username (Termminated)
+Step 2: Enter password (pass)
+An error should appear saying "The username or password you have entered is incorrect. Please Try Again."
+
+6) Login Test for Admin with a incorrect password
+Step 1: Enter username (admin)
+Step 2: Enter passoard (passward)
+An error should appear saying "The username or password you have entered is incorrect. Please Try Again."
+
+7) Login Test for DCP with an incorrect password
+Step 1: Enter username (DCP)
+Step 2: Enter password (passs)
+An error should appear saying "The username or password you have entered is incorrect. Please Try Again."
+
+8) Login Test for Auditor with an incorrect password
+Step 1: Enter username (Auditor)
+Step 2: Enter password (passs)
+An error should appear saying "The username or password you have entered is incorrect. Please Try Again."
+
+9) Login Test for Reviewer with an incorrect password
+Step 1: Enter username (Reviewer)
+Step 2: Enter password (passs)
+An error should appear saying "The username or password you have entered is incorrect. Please Try Again."
+
+10) Login Test for a Terminated Employee with an incorrect password
+Step 1: Enter username (Terminated)
+Step 2: Enter password (passs)
+An error should appear saying "The username or password you have entered is incorrect. Please Try Again."
+
+11) Test for the Admin to change its password and the new passwords do not match
+Step 1: Enter username (Admin).
+Step 2: Enter password (password).
+Step 3: Click on the Login button.
+Step 4: Click the "My Account" tab. 
+Step 5: Enter the current password that you are using to login.
+Step 6: Enter the new password that you want to use.
+Step 7: Enter a different password in the "Confirm new password" that does not match the new password.
+Step 8: Click "Confirm". A message will pop-up saying "New Passwords do not match!".
+Step 9: Click "Ok".
+
+12) Test for the DCP to change its password and the new passwords do not match
+Step 1: Enter username (DCP).
+Step 2: Enter password (pass).
+Step 3: Click on the Login button.
+Step 4: Click the "My Account" tab. 
+Step 5: Enter the current password that you are using to login.
+Step 6: Enter the new password that you want to use.
+Step 7: Enter a different password in the "Confirm new password" that does not match the new password.
+Step 8: Click "Confirm". A message will pop-up saying "New Passwords do not match!".
+Step 9: Click "Ok".
+
+13) Test for the Reviewer to change its password and the new passwords do not match
+Step 1: Enter username (Reviewer).
+Step 2: Enter password (pass).
+Step 3: Click on the Login button.
+Step 4: Click the "My Account" tab. 
+Step 5: Enter the current password that you are using to login.
+Step 6: Enter the new password that you want to use.
+Step 7: Enter a different password in the "Confirm new password" that does not match the new password.
+Step 8: Click "Confirm". A message will pop-up saying "New Passwords do not match!".
+Step 9: Click "Ok".
+
+14) Test for the Auditor to change its password and the new passwords do not match
+Step 1: Enter username (Auditor).
+Step 2: Enter password (pass).
+Step 3: Click on the Login button.
+Step 4: Click the "My Account" tab. 
+Step 5: Enter the current password that you are using to login.
+Step 6: Enter the new password that you want to use.
+Step 7: Enter a different password in the "Confirm new password" that does not match the new password.
+Step 8: Click "Confirm". A message will pop-up saying "New Passwords do not match!".
+Step 9: Click "Ok".
+
+15) Test for a DCP to attempt to delete a saved draft of note when one is not selected
+Step 1: Enter username (DCP)
+Step 2: Enter password (pass)
+Step 3: Click the "My Account" tab.
+Step 4: Click the "Delete" button under the "My Notes" portion of the account tab to delete an unselected note.
+Step 5: A message should appear stating, "Please select a note to delete." Informing the user that a note has not been selected.
+Step 6: Click "OK" and the error message will disappear.
+
+16) Test for a Reviewer to attempt to reject a note when one is not selected
+Step 1: Enter username (Reviewer).
+Step 2: Enter password (pass).
+Step 5: Click the "Reject" button. A message will pop-up alerting the user, "Please select a note to reject.".
+Step 6: Click "OK" and the error message will disappear.
+
+17) Test for a Reviewer to attempt to approve a note when one is not selected
+Step 1: Enter username (Reviewer).
+Step 2: Enter password (pass).
+Step 5: Click the "Approve" button. A message will pop-up alerting the user, "Please select a note to approve.".
+Step 6: Click "OK" and the error message will disappear.

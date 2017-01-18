@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.1">
+  <zoom_level>12</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>192</x>
+      <y>72</y>
+      <w>696</w>
+      <h>348</h>
+    </coordinates>
+    <panel_attributes>Package::Data_Access
+UserDBConnect
+--
+- username:string
+- password:string
+- firstName:string
+- lastName:string
+- title:string
+- clearance:int
+--
++ UserLogic login(object:UserLogic)throws SQLException, ClassNotFoundException
++ ArrayList&lt;String&gt; populateUser()throws SQLException, ClassNotFoundException:static
++ UserLogic userSelect(object:UserLogic)throws ClassNotFoundException,SQLException
++ UserLogic userSelect(userID:int)throws ClassNotFoundException,SQLException
++ deleteUser(userID:string)throws ClassNotFoundException,SQLException:void
++ insertUser(object:UserLogic)throws SQLException,ClassNotFoundException:void
++ update(object:UserLogic)throws SQLException,ClassNotFoundException:void 
++ UserLogic selectByID(user:UserLogic)throws SQLExceptiom,ClassNotFoundException
++ doesExist(username:string)throws ClassNotFoundException,SQLException:static boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

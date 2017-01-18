@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.1">
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>120</x>
+      <y>56</y>
+      <w>120</w>
+      <h>432</h>
+    </coordinates>
+    <panel_attributes>userLogic
+--
+userName
+oldUserName
+password
+oldPassword
+firstName
+lastName
+cleareance
+userID
+--
+getuserName
+setuserNAme
+getoldUserName
+setoldUserName
+getpassword
+setpasword
+getoldPassword
+setoldPassword
+getfirstName
+setfirstName
+getlastName
+setlastName
+getclearance
+setclearance
+getuserID
+setuserID
+--
+isValid()
+select()
+insertUser()
+updateUser()
+clearenceCheck()
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>296</x>
+      <y>8</y>
+      <w>144</w>
+      <h>296</h>
+    </coordinates>
+    <panel_attributes>participantLogic
+--
+participantID
+participantFirstName
+participantLastName
+insurance
+medicalidNumber
+--
+getparticipantID
+setparticipantID
+getparticipantFirstName
+setparticipantFirstName
+getparticipantLastName
+setparticipantLastName
+getinsurance
+setinsurance
+getmedicalidNumber
+setmedicalidNumber
+--
+addParticipant()
+participants()
+select()
+updateParticipant()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>552</x>
+      <y>0</y>
+      <w>160</w>
+      <h>632</h>
+    </coordinates>
+    <panel_attributes>noteLogic
+--
+text
+noteID
+comment
+participantID
+userID
+isSubmitted
+isAccepted
+timeReviewerAccepted
+noteReviewerAccepted
+timeStarted
+timeSubmitted
+lastUpdated
+timeAccepted
+--
+gettext
+settext
+getnoteID
+setnoteID
+getcomment
+setcomment
+getparticipantID
+setparticipantID
+getuserID
+setuserID
+getisSubmitted
+setisSubmitted
+getisAccepted
+setisAccepted
+gettimeReviewerAccepted
+settimeReviewerAccepted
+getnoteReviewerAccepted
+setnoteReviewerAccepted
+gettimeStarted
+settimeStarted
+gettimeSubmitted
+settimesubmitted
+getlastUpdated
+setlastUpdated
+gettimeAccepted
+settimeAccepted
+--
+submit()
+acceptNote()
+list()
+select()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>112</x>
+      <y>544</y>
+      <w>144</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>AccountLogic
+--
+oldPassword
+newPassword
+userName
+--
+getoldPassword
+setoldPassword
+getnewPassword
+setnewPassword
+getuserName
+setuserName
+--
+updateAccount()
+charArrayToString()
+validate()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>808</x>
+      <y>232</y>
+      <w>136</w>
+      <h>496</h>
+    </coordinates>
+    <panel_attributes>printLogic
+--
+note
+parName
+userName
+userTitle
+date
+location1
+location2
+tempLocation
+medNum
+--
+getnote
+setnote
+getparName
+setparName
+getuserName
+setuserName
+getuserTitle
+setuserTitle
+getdate
+setdate
+getlocation1
+setlocation1
+getlocation2
+setlocation2
+gettemplocation
+settempLocation
+getmedNum
+setmedNum
+--
+print()
+getPrintList&lt;&gt;
+savePrint()
+savePrintList()
+directoryPicker()
+display()
+displayList()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>216</x>
+      <y>128</y>
+      <w>96</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>80;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>416</x>
+      <y>120</y>
+      <w>152</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>136;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>688</x>
+      <y>96</y>
+      <w>136</w>
+      <h>272</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>120;256;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>296</x>
+      <y>384</y>
+      <w>144</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>goalLogic
+--
+goalID
+frequency
+isWeekly
+participantID
+description
+objetive
+guidanceNote
+--
+goalList&lt;&gt;
+add()
+update()
+delete()
+removeGoal()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>328</x>
+      <y>280</y>
+      <w>40</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>24;104;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>352</x>
+      <y>280</y>
+      <w>40</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;.</panel_attributes>
+    <additional_attributes>24;104;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>376</x>
+      <y>560</y>
+      <w>440</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;.</panel_attributes>
+    <additional_attributes>424;88;24;88;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>152</x>
+      <y>464</y>
+      <w>40</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>24;80;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>232</x>
+      <y>672</y>
+      <w>592</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>576;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>416</x>
+      <y>432</y>
+      <w>152</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>136;24;24;24</additional_attributes>
+  </element>
+</diagram>

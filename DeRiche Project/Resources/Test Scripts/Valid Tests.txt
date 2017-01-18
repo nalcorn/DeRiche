@@ -1,0 +1,305 @@
+1) Login Test for Admin
+Step 1: Enter username (admin).
+Step 2: Enter password (password).
+Step 3: Click on the Login button.
+You should now see all of the tabs for an admin.
+
+2) Login Test for DCP
+Step 1: Enter username (DCP).
+Step 2: Enter password (pass).
+Step 3: Click on the Login button.
+You should now see all of the tabs for a DCP.
+
+3) Login Test for Auditor
+Step 1: Enter username (Auditor).
+Step 2: Enter password (pass).
+Step 3: Click on the Login button.
+You should now see all of the tabs for an Auditor.
+
+4) Login Test for Reviewer
+Step 1: Enter username (Reviewer).
+Step 2: Enter password (pass).
+Step 3: Click on the Login button.
+You should now see all of the tabs for a Reviewer.
+
+5) Login Test for a Terminated Employee
+Step 1: Enter username (Terminated).
+Step 2: Enter password (pass).
+Step 3: Click on the Login button.
+You should now not see anything since this person is not authorized access to the system.
+
+6) Test for a user to clear the username and password entered
+Step 1: Enter a username.
+Step 2: Enter a password.
+Step 3: Click the "Clear" button.
+The username and password should now have been cleared.
+
+7) Test for the Admin to change its password
+Step 1: Enter username (admin).
+Step 2: Enter password (password).
+Step 3: Click on the Login button.
+Step 4: Click the "My Account" tab. 
+Step 5: Enter the current password that you are using to login.
+Step 6: Enter the new password that you want to use.
+Step 7: Re-enter the new password that you want to use to confirm the change.
+Step 8: Click "Confirm". A message will pop-up asking "Are you sure you would like to update your password?".
+Step 9: Click "Yes". A confirmation will appear letting you know that it is updated.
+
+8) Test for the DCP to change its password
+Login Test for DCP
+Step 1: Enter username (DCP).
+Step 2: Enter password (pass).
+Step 3: Click on the Login button.
+Step 4: Click the "My Account" tab. 
+Step 5: Enter the current password that you are using to login.
+Step 6: Enter the new password that you want to use.
+Step 7: Re-enter the new password that you want to use to confirm the change.
+Step 8: Click "Confirm". A message will pop-up asking "Are you sure you would like to update your password?".
+Step 9: Click "Yes". A confirmation will appear letting you know that it is updated.
+
+9) Test for the Auditor to change its password
+Step 1: Enter username (Auditor).
+Step 2: Enter password (pass).
+Step 3: Click on the Login button.
+Step 4: Click the "My Account" tab. 
+Step 5: Enter the current password that you are using to login.
+Step 6: Enter the new password that you want to use.
+Step 7: Re-enter the new password that you want to use to confirm the change.
+Step 8: Click "Confirm". A message will pop-up asking "Are you sure you would like to update your password?".
+Step 9: Click "Yes". A confirmation will appear letting you know that it is updated.
+
+10) Test for the Reviewer to change its password
+Step 1: Enter username (Reviewer).
+Step 2: Enter password (pass).
+Step 3: Click on the Login button.
+Step 4: Click the "My Account" tab. 
+Step 5: Enter the current password that you are using to login.
+Step 6: Enter the new password that you want to use.
+Step 7: Re-enter the new password that you want to use to confirm the change.
+Step 8: Click "Confirm". A message will pop-up asking "Are you sure you would like to update your password?".
+Step 9: Click "Yes". A confirmation will appear letting you know that it is updated.
+
+11) Test for Admin to add a new participant
+Step 1: Enter username (admin).
+Step 2: Enter password (password).
+Step 3: Click on the Login button.
+Step 4: Click on the Login button.
+Step 5: Click the "Participants" tabs.
+Step 6: Keep the dropdown box on "Select a Participant"
+Step 7: Check whether the participant has Medicaid or is Self-Pay in the "Insurance" row.
+Step 8: Enter the Participants' Medicaid number in the "Medicaid" text box.
+Step 9: Enter the Participants' First name in the "First Name" text box.
+Step 10: Enter the Participants' Last name in the "Last Name" text box.
+Step 11: Under the "Mandatory Forms" select the appropriate box if they require either a 
+Seizures Form, BM Form, or a Repositioning Form.
+Step 12: Once you confirm that all the information entered is accurate, 
+click the "Add Participant" button.
+Step 13: A pop-up will appear asking "Are you sure you would like to add this participant?"
+Click the "Yes" button.
+Step 14: Once you do this a message should appear saying "You have successfully added this participant."
+Click the "OK" button.
+Step 15: To confirm that the participant has been added you can select the dropdown box to see if the participant has been added. 
+
+12) Test for Admin to update an existing participant
+Step 1: Enter username (admin).
+Step 2: Enter password (password)
+Step 3: Click on the Login button.
+Step 4: Click the "Participants" tab.
+Step 5: Select "Tyrus Skipper" in the "Select a Participant" dropdown box.
+Step 6: Once you select the participant all their information should appear.
+Step 7: You can now edit any of the participant's information. 
+Step 8: Once you edit the information click the "Update Participant" button.
+Step 9: A message will pop-up asking "Would you like to update the participant's information?".
+Step 10: Click "Yes" and another message will pop-up stating "You have successfully this participant."
+Step 11: Click "OK".
+
+13) Test for Admin to add a goal to a participant
+Step 1: Enter username (admin).
+Step 2: Enter password (password).
+Step 3: Click on the Login button.
+Step 4: Click the "Goals" tab.
+Step 5: Select a participant from the dropdown box.
+Step 6: On the second dropdown box keep it on "New Goal".
+Step 7: Next to Frequency is a dropdown box. Select the frequency, how many days, in which the participant needs to do the goal.
+Step 8: Next to Interval is a dropdown box. Select the interval, week or month, in which the participant needs to do the goal.
+Step 9: Write the name of the goal in the textbox under "Goal:".
+Step 10: Write the objective of the goal in the textbox under "Objective:"
+Step 11: Write any notes on the guidance of the goal in the textbox under "Guidance Notes:"
+Step 12: Click the "Add" button to add the new goal to the participant.
+Step 13: A message will pop-up saying "Do you want to add this goal to the selected participant?". Click "Yes".
+
+14) Test for Admin to update a goal from a participant
+Step 1: Enter username (admin).
+Step 2: Enter password (password).
+Step 3: Click on the Login button.
+Step 4: Click the "Goals" tab.
+Step 5: Select a participant from the dropdown box.
+Step 6: Select the goal that you want to update. Once the goal is selected all the information should appear.
+Step 7: Make any changes that you need on any of the data fields for the goal.
+Step 8: Click the "Update" button. A message will pop-up, "Are you sure you want to update the goal?".
+Step 9: Click "Yes." The goal is now updated. 
+
+15) Test for Admin to remove a goal from a participant
+Step 1: Enter username (admin).
+Step 2: Enter password (password).
+Step 3: Click on the Login button.
+Step 4: Click the "Goals" tab.
+Step 5: Select a participant from the dropdown box.
+Step 6: Select the goal that you want to delete. Once the goal is selected all the information should appear.
+Step 7: Click the "Delete" button. A message will pop-up asking "Do you want to remove this goal."
+Step 8: Click "Yes". The goal is now removed from the participant.
+
+16) Test for Admin to update a current user in the database
+Step 1: Enter username (admin).
+Step 2: Enter password (password).
+Step 3: Click on the Login  
+Step 4: Click the "Users" tab.
+Step 5: Select a user from the dropdown box.
+Step 6: The user's information should now be populated in the respected text fields.
+Step 7: Modify any information that would like for the selected user.
+Step 8: Click the "Update" button. A message will pop-up asking "Are you sure you want to update this user?".
+Step 9: Click "Yes". The user has now been updated.  
+
+17) Test for Admin to delete a user from the database
+Step 1: Enter username (admin).
+Step 2: Enter password (password).
+Step 3: Click on the Login button.
+Step 4: Click the "Users" tab.
+Step 5: Select a user from the dropdown box.
+Step 6: The user's information should now be populated in the respected text fields.
+Step 7: Click the "Delete" button. A message will pop-up asking "Are you sure you want to delete this user?".
+Step 8: Click "Yes". The user is now removed from the database.
+
+18) Test for the Admin to add a new user to the database
+Step 1: Enter username (admin).
+Step 2: Enter password (password).
+Step 3: Click on the Login button.
+Step 4: Click the "Users" tab.
+Step 5: In the textfield next to the "Username:" enter the username for the new user.
+Step 6: In the textfield next to the "Password:" enter the password for the new user.
+Step 7: In the textfield next to the "First Name:" enter the user's First Name.
+Step 8: In the textfield next to the "Last Name:" enter the user's Last Name.
+Step 9: Select the neccessary level authorization for the user.
+Step 10: Click the "New" button. A message will pop-up asking "Would you like to create this user?".
+Step 11: Click "Yes". The user is now in the database. 
+
+19) Test for Admin to clear the fields after selecting a user from the "Users" tab
+Step 1: Enter username (admin).
+Step 2: Enter password (password).
+Step 3: Click on the Login button.
+Step 4: Click the "Users" tab.
+Step 5: Select a user from the dropdown box.
+Step 6: Click the "Clear" button. The information has now been cleared.
+
+20) Test for DCP to write and submit a new note for a participant 
+Step 1: Enter username (DCP).
+Step 2: Enter password (pass).
+Step 3: Click on the Login button.
+Step 4: When the DCP logs in the "Note Writing" tab should be the first one seen.
+Step 5: Select a participant to write a note for from the "Select A Participant" dropdown box.
+The goals assigned to the participant will be populated in the text boxes for the goals.
+Step 6: Click the dropdown box next to each goal to choose the Goal Prompt Level.
+Step 7: Click the "Yes" or "No" radio button for if the goal was completed or not.
+Step 8: Click the "+" button to each populated goal to add it to the Note textfield.
+Step 9: To the right is a series of check boxes to add the neccessary forms to the note.
+Check the neccessary "Forms" box for the participant.
+Step 10: Add any more neccessary writing needed in the textfield for the note.
+Step 11: Click the "Submit Note" button. A dialog box will appear for the DCP to add any comments
+about the note to the Note Reviewer, which is optional. 
+Step 12: After writing a comment to the Note Reviewer or leaving it blank, click the "Submit" button.
+A message will pop-up saying "Your note was submitted." Click "OK". Close the dialog box and you will
+see that all of the information has been cleared.
+
+21) Test for the DCP to save a note as a draft
+Step 1: Enter username (DCP).
+Step 2: Enter password (pass).
+Step 3: Click on the Login button.
+Step 4: When the DCP logs in the "Note Writing" tab should be the first one seen.
+Step 5: Select a participant to write a note for from the "Select A Participant" dropdown box.
+The goals assigned to the participant will be populated in the text boxes for the goals.
+Step 6: Click the dropdown box next to each goal to choose the Goal Prompt Level.
+Step 7: Click the "Yes" or "No" radio button for if the goal was completed or not.
+Step 8: Click the "+" button to each populated goal to add it to the Note textfield.
+Step 9: To the right is a series of check boxes to add the neccessary forms to the note.
+Check the neccessary "Forms" box for the participant.
+Step 10: Add any more neccessary writing needed in the textfield for the note.
+Step 11: Click the "Save Draft" button. A message will pop-up asking "Do you want to save the note as a draft?".
+Step 12: Click "Yes". The note is now saved as a draft and can be seen in the saved notes portion under your account.
+
+22) Test for the Note Reviewer to reject a submitted note from a DCP
+Step 1: Enter username (Reviewer).
+Step 2: Enter password (pass).
+Step 3: Click on the Login button.
+Step 4: Select a note to review from the list that have been submitted from the DCPs.
+Step 5: Since this is a test for rejecting a note assume that the note is incorrect.
+Step 6: Click the "Reject" button. A dialog box will appear asking for the reviewer to add
+any comments on why the note is rejected.
+Step 7: Enter "This is a test to see the note rejected." into the comment box directly under
+the comment from the DCP. 
+Step 8: Click "Accept". The note has now been rejected for the DCP to fix the issues.
+
+23) Test for the DCP to submit a note that was saved
+Step 1: Enter username (DCP).
+Step 2: Enter password (pass).
+Step 3: Click on the Login button.
+Step 4: When the DCP logs in the "Note Writing" tab should be the first one seen.
+Step 5: Click the "My Account" tab.
+Step 6: You will see "My Notes" under the "My Account" tab. This is where all the saved notes are.
+Step 7: Select a saved note from the dropdown box to open up. Click the "Open" button.
+The application will now move to the "Note Writing" tab for you to continue editing the saved note.
+Step 8: Make any changes to the note that you need to do. 
+Step 9: Click the "Submit Note" button. A dialog box will appear for the DCP to add any comments
+about the note to the Note Reviewer, which is optional. 
+Step 10: After writing a comment to the Note Reviewer or leaving it blank, click the "Submit" button.
+A message will pop-up saying "Your note was submitted." Click "OK". Close the dialog box and you will
+see that all of the information has been cleared.
+
+24) Test for the DCP to delete a saved note
+tep 1: Enter username (DCP).
+Step 2: Enter password (pass).
+Step 3: Click on the Login button.
+Step 4: When the DCP logs in the "Note Writing" tab should be the first one seen.
+Step 5: Click the "My Account" tab.
+Step 6: You will see "My Notes" under the "My Account" tab. This is where all the saved notes are.
+Step 7: Select a saved note from the dropdown box to delete. 
+Step 8: Click the "Delete" button. A message will pop-up asking "Are you sure you want to delete the note?".
+Step 9: Click "Yes". The saved note has now been deleted. 
+
+25) Test for the DCP to write a new note after submitting a saved note
+Step 1: Enter username (DCP).
+Step 2: Enter password (pass).
+Step 3: Click on the Login button.
+Step 4: When the DCP logs in the "Note Writing" tab should be the first one seen.
+Step 5: Click the "My Account" tab.
+Step 6: You will see "My Notes" under the "My Account" tab. This is where all the saved notes are.
+Step 7: Select a saved note from the dropdown box to open up. Click the "Open" button.
+The application will now move to the "Note Writing" tab for you to continue editing the saved note.
+Step 8: Make any changes to the note that you need to do. 
+Step 9: Click the "Submit Note" button. A dialog box will appear for the DCP to add any comments
+about the note to the Note Reviewer, which is optional. 
+Step 10: After writing a comment to the Note Reviewer or leaving it blank, click the "Submit" button.
+A message will pop-up saying "Your note was submitted." Click "OK". Close the dialog box and you will
+see that all of the information has been cleared.
+Step 11: Click the "New Note" button to reset the NoteID to the next available one so it will not override
+the note that was just submitted. Select a participant to write a note for from the "Select A Participant" dropdown box.
+The goals assigned to the participant will be populated in the text boxes for the goals.
+Step 12: Click the dropdown box next to each goal to choose the Goal Prompt Level.
+Step 13: Click the "Yes" or "No" radio button for if the goal was completed or not.
+Step 14: Click the "+" button to each populated goal to add it to the Note textfield.
+Step 15: To the right is a series of check boxes to add the neccessary forms to the note.
+Check the neccessary "Forms" box for the participant.
+Step 16: Add any more neccessary writing needed in the textfield for the note.
+Step 17: Click the "Submit Note" button. A dialog box will appear for the DCP to add any comments
+about the note to the Note Reviewer, which is optional. 
+Step 18: After writing a comment to the Note Reviewer or leaving it blank, click the "Submit" button.
+A message will pop-up saying "Your note was submitted." Click "OK". Close the dialog box and you will
+see that all of the information has been cleared.
+
+26) Test for Note Reviewer to approve a submitted note from a DCP
+Step 1: Enter username (Reviewer).
+Step 2: Enter password (pass).
+Step 3: Click on the Login button.
+Step 4: Select a note to review from the list that have been submitted from the DCPs.
+Step 5: Since this is a test for approving a note assume that everything is correct.
+Step 6: Click the "Approve" button. A message will pop-up asking "Do you want to approve the note submission?".
+Step 7: Click "Yes". The note has now been approved and removed from the list.

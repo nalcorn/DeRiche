@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.1">
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>248</x>
+      <y>0</y>
+      <w>536</w>
+      <h>1400</h>
+    </coordinates>
+    <panel_attributes>
+Package::Presentation
+AdminForm
+--
+-currentGoalParticipant:String
+-loginTest:int
+-openDocTest:boolean
+-noteID:int
+-comment:String
+-noteComment:String
+-teamName:String
+-version:String
+-semester:String
+-activeUser:String
+--
++AdminForm()
++updateForm()
++clearNote()
++clearGoals
++clearParticipants()
++btn_newUserMouseClicked(java.awt.event.MouseEvent evt)
++btn_uploadFileMouseClicked(java.awt.event.MouseEvent evt)
++btn_downloadFilesMouseClicked(java.awt.event.MouseEvent evt)
++btn_rejectNoteMouseClicked(java.awt.event.MouseEvent evt)
++btn_newUserActionPerformed(java.awt.event.ActionEvent evt)
++btn_deleteUserActionPerformed(java.awt.event.ActionEvent evt)
++combo_selectUserActionPerformed(java.awt.event.ActionEvent evt)
++btn_updateUserActionPerformed(java.awt.event.ActionEvent evt)
++btn_viewUserActionPerformed(java.awt.event.ActionEvent evt)
++btn_confirmNewPassActionPerformed(java.awt.event.ActionEvent evt)
++btn_submitNoteMouseClicked(java.awt.event.MouseEvent evt)
++check_medicaidActionPerformed(java.awt.event.ActionEvent evt)
++check_selfPayActionPerformed(java.awt.event.ActionEvent evt)
++btn_addParticipantActionPerformed(java.awt.event.ActionEvent evt)
++combo_participantSelectActionPerformed(java.awt.event.ActionEvent evt)
++combo_goalPartSelectActionPerformed(java.awt.event.ActionEvent evt)
++btn_updateParticipantActionPerformed(java.awt.event.ActionEvent evt)
++btn_displayCalendarMouseClicked(java.awt.event.MouseEvent evt)
++combo_goalGoalSelectActionPerformed(java.awt.event.ActionEvent evt)
++btn_goalAddActionPerformed(java.awt.event.ActionEvent evt)
++combo_intervalActionPerformed(java.awt.event.ActionEvent evt)
++btn_goalUpdateActionPerformed(java.awt.event.ActionEvent evt)
++combo_noteChooseParticipant(java.awt.event.ActionEvent evt)
++btn_appendGoal1ActionPerformed(java.awt.event.ActionEvent evt)
++btn_appendGoal2ActionPerformed(java.awt.event.ActionEvent evt)
++btn_appendGoal3ActionPerformed(java.awt.event.ActionEvent evt)
++btn_appendGoal4ActionPerformed(java.awt.event.ActionEvent evt)
++btn_appendGoal5ActionPerformed(java.awt.event.ActionEvent evt)
++btn_submitNoteActionPerformed(java.awt.event.ActionEvent evt)
++btn_saveNoteActionPerformed(java.awt.event.ActionEvent evt)
++populateSavedNoteList(List&lt;NoteLogic&gt; list)
++btn_submitSubmitActionPerformed(java.awt.event.ActionEvent evt)
++list_timeReviewParticipantMouseClicked(java.awt.event.MouseEvent evt)
++list_selectNoteToReviewMouseClicked(java.awt.event.MouseEvent evt)
++btn_sortByParticipantActionPerformed(java.awt.event.ActionEvent evt)
++tabPane_conatainerMouseClicked(java.awt.event.MouseEvent evt)
++btn_approveNoteActionPerformed(java.awt.event.ActionEvent evt)
++btn_cancelMouseClicked(java.awt.event.MouseEvent evt)
++btn_cancelTimeChangeMouseClicked(java.awt.event.MouseEvent evt)
++btn_cancelRejectMouseClicked(java.awt.event.MouseEvent evt)
++btn_cancelCommentMouseClicked(java.awt.event.MouseEvent evt)
++btn_submitCancelMouseClicked(java.awt.event.MouseEvent evt)
++btn_editTimeMouseClicked(java.awt.event.MouseEvent evt)
++btn_submitSubmitMouseClicked(java.awt.event.MouseEvent evt)
++btn_acceptAddCommentsMouseClicked(java.awt.event.ActionEvent evt)
++btn_confirmRejectMouseClicked(java.awt.event.MouseEvent evt)
++btn_confirmTimeChangeMouseClicked(java.awt.event.MouseEvent evt)
++btn_confirmMouseClicked(java.awt.event.MouseEvent evt)
++btn_cancelNewPassActionPerformed(java.awt.event.ActionEvent evt)
++btn_goalRemoveActionPerformed(java.awt.event.ActionEvent evt)
++btn_openNoteActionPerformed(java.awt.event.ActionEvent evt)
++btn_deleteNoteActionPerformed(java.awt.event.ActionEvent evt)
++combo_selectNoteToOpenActionPerformed(java.awt.event.ActionEvent evt)
++combo_selectNoteToOpenFocusGained(java.awt.event.FocusEvent evt)
++combo_userLevelActionPerformed(java.awt.event.ActionEvent evt)
++item_logoutActionPerformed(java.awt.event.ActionEvent evt)
++item_exitActionPerformed(java.awt.event.ActionEvent evt)
++btn_confirmActionPerformed(java.awt.event.ActionEvent evt)
++item_documentationActionPerformed(java.awt.event.ActionEvent evt)
++check_seizureActionPerformed(java.awt.event.ActionEvent evt)
++btn_uploadFileActionPerformed(java.awt.event.ActionEvent evt)
++btn_rejectNoteActionPerformed(java.awt.event.ActionEvent evt)
++btn_newNoteActionPerformed(java.awt.event.ActionEvent evt)
++txt_noteCommentsMouseClicked(java.awt.event.MouseEvent evt)
++btn_sortByDateActionPerformed(java.awt.event.ActionEvent evt)
++btn_sortByUserActionPerformed(java.awt.event.ActionEvent evt)
++jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt)
++btn_PrintActionPerformed(java.awt.event.ActionEvent evt)
++txt_MedicaidIDActionPerformed(java.awt.event.ActionEvent evt)
++txt_PatientNameActionPerformed(java.awt.event.ActionEvent evt)
++txt_userIDActionPerformed(java.awt.event.ActionEvent evt)
++btn_OKActionPerformed(java.awt.event.ActionEvent evt)
++txt_participantIDActionPerformed(java.awt.event.ActionEvent evt)
++btn_SaveActionPerformed(java.awt.event.ActionEvent evt)
++item_aboutActionPerformed(java.awt.event.ActionEvent evt)
++btn_displayCalendarActionPerformed(java.awt.event.ActionEvent evt)
++txt_userTitleActionPerformed(java.awt.event.ActionEvent evt)
++main(String args[])
++populateComboSelectUser(ArrayList list)
++populateComboParticipant(ArrayList&lt;ParticipantLogic&gt; list)
++populateParticipantNoteReview(List&lt;NoteLogic&gt; list)
++populateParticipantJList(ArrayList&lt;ParticipantLogic&gt; list throws SQLException, ClassNotFoundException
++populateComboGoal (ArrayList&lt;GoalLogic&gt; list)
++populateComboGoal()
++newNote()</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -1,0 +1,6 @@
+Get Started
+
+To get started with working on the application you can either download and install Netbeans 8.1 IDE, Java 1.8 SDK, and 
+MySQL Workbench. It is up to your group if you want to continue using what we used over the Fall Semester or something
+different. When you first run the program it will notify you that you are missing some files. All you have to do is click
+Resolve and find the proper file in the Resources folder.

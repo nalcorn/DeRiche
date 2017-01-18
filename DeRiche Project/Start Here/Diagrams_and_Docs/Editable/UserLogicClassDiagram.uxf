@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.1">
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>216</x>
+      <y>32</y>
+      <w>784</w>
+      <h>480</h>
+    </coordinates>
+    <panel_attributes>Package::Business
+User Logic
+--
+- username:String
+- oldUserName:String
+- password:String
+- oldPassword:String
+- firstName:String
+- lastName:String
+- title:String
+- clearance:int
+- userID:int
+--
++ getUserID()
++ setUserID(userID:int):void
++ getUsername()
++ setUsername(username:string):void
++ getOldUserName()
++ setOldUserName(oldUserName:string):void
++ getPassword()
++ setPassword(password:string):void
++ getOldPassword()
++ setOldPassword(oldPassword:string):void
++ getFirstName()
++ setFirstName(firstName:string):void
++ getLastName()
++ setLastName(lastName:string):void
++ getUserTitle()
++ setUserTitle(title:string):void
++ getClearance()
++ setClearance(clearance:int):void
++ isValid(username:string,password:string) throws SQLException, ClassNotFoundException:boolean
++ UserLogic select(username:object) throws ClassNotFoundException,ArrayIndexOurOfBoundsException,SQLException
++ UserLogic select(ID:int) throws ClassNotFoundException,SQLException
++ inserUser(username:string,password:string,firstName:string,lastName:string,title:string,clearance:object)throws SQLException,ClassNotFoundException:void
++ updateUser()throws SQLException,ClassNotFoundException:void
++ clearanceCheck(clearance:string):int
++ clearanceCheck(clearance:string):String</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="12.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>10</x>
+      <y>10</y>
+      <w>540</w>
+      <h>650</h>
+    </coordinates>
+    <panel_attributes>Package:Buisness Logic:
+PrintLogic
+--
+-Note: String
+-ParName: String
+-UserName: String
+-UserTitle: String
+-Date: Timestamp
+-Location: String
+-medNum: String
+-printNotes: ArrayList()
+-jfc: JFileChooser()
+--
++setNote(note:String)
++setParName(name:String)
++setUserName(name:String)
++setUserTitle(title:String)
++setDate(Date:String)
++setMedNum(medNum:String)
++setLocation(location:String)
++getNote():String
++getParName():String
++getUserName():String
++getUserTitle():String
++getDate():String
++getMedNum():String
++getLocation():String
++PrintLogic():String
++print(noteId:int; location: String):PrintLogic
++getPrintList(location:String; participantID:String;start:String;end:String):Arraylist
++savePrint(print:PrintLogic;jfc:JFileChooser)
++printPrint(print:PrintLogic)
++savePrintList(printList:ArrayList)
++printPrintList(printList:ArrayList)
++directoryPicker():JFileChooser
++display()
++displayList(list:ArrayList)
++main([]Args:String):static</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
