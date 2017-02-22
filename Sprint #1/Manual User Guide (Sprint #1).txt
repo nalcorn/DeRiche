@@ -1,0 +1,7 @@
+Steps for logging in:
+
+1. User enters domain name for login page into the browser and presses enter or clicks search;
+2. User types in username and password into the corresponding field provided;
+3. User clicks the submit button;
+4. User re-enters username and password into the corresponding field provided (Only if username or password are incorrect);
+5. User sees the home page that corresponds to their privilege level;
