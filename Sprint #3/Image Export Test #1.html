@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  #MyCanvas {border:1px solid black}
+</style>
+<script type="text/javascript">
+
+  var canvas;
+  var ctx;
+  var drawing;
+  var img;
+
+  var prevX;
+  var prevY;
+
+  function init() {
+    canvas = document.getElementById("MyCanvas");
+    ctx = canvas.getContext("2d");
+    drawing = false;
+
+    ctx.setStrokeStyle = "blue";
+    ctx.lineWidth = "2";
+
+    img = new Image();
+    img.src = 'check.png';         
+    img.onload = function(){
+      ctx.drawImage(img,0,0);
+    }
+
+    canvas.addEventListener("mousemove", function(e) {
+      if (drawing) {
+        draw(e);
+      }
+    });
+
+    canvas.addEventListener("mousedown", function(e) {
+      drawing = true;
+
+      prevX = e.clientX;
+      prevY = e.clientY;
+    });
+
+    canvas.addEventListener("mouseup", function(e) {
+      drawing = false;
+    });
+
+    canvas.addEventListener("mouseout", function(e) {
+      drawing = false;
+    });
+  }
+
+  function draw(e) {
+      ctx.beginPath();
+      ctx.moveTo(prevX, prevY);
+      ctx.lineTo(e.clientX - 8, e.clientY - 8);
+      ctx.stroke();
+
+      prevX = e.clientX - 8;
+      prevY = e.clientY - 8;
+  }
+
+  function erase() {
+    if (confirm("Are you sure you want to clear the drawing surface?")) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(img,0,0);
+    }
+  }
+
+  function save() {
+    
+  }
+
+</script>
+</head>
+<body onload="init();">
+  <canvas id="MyCanvas" width="673" height="514"></canvas>
+  <input type="button" value="save" id="saveBtn" size="30" onclick="save()">
+  <input type="button" value="clear" id="clearBtn" size="23" onclick="erase()">
+</body>
+</html>
