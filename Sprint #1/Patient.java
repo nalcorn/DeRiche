@@ -29,6 +29,8 @@ public class Patient {
     
    /**
      * @return the patientId
+     *@Author Trevor Bal & Carl Moon
+     *@Since 3-1-17
      */
     public String getPatientId() {
         return patientId;
@@ -36,27 +38,35 @@ public class Patient {
 
     /**
      * @param patientId the patientId to set
+     * @ Author Trevor Bal & Carl Moon
      */
     public void setPatientId(String patientId) {
         this.patientId = patientId;
     }
 
-    /**
+    /** 
+     *Description   
      * @return the firstName
+     *@ Author Trevor Bal & Carl Moon
+     *@Since 3-1-17
      */
     public String getFirstName() {
         return firstName;
     }
 
     /**
+    *@Description  setFirstName sets the first name of the patient
      * @param firstName the firstName to set
+     
      */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
     /**
+    *@Description getLasteName return the name of the patient 
      * @return the lastName
+     @ Author Trevor Bal & Carl Moon
      */
     public String getLastName() {
         return lastName;
@@ -69,8 +79,10 @@ public class Patient {
         this.lastName = lastName;
     }
 
-    /**
+    /** 
      * @return the insurance
+      *@ Author Trevor Bal & Carl Moon
+      *@Since 3-1-17
      */
     public String getInsurance() {
         return insurance;
@@ -78,13 +90,18 @@ public class Patient {
 
     /**
      * @param insurance the insurance to set
+      *@ Author Trevor Bal & Carl Moon
+      *@Since 3-1-17
      */
     public void setInsurance(String insurance) {
         this.insurance = insurance;
     }
 
     /**
+     *Description getMedicaidNumber returns the patient medicaidNumber
      * @return the medicaidNumber
+      *@ Author Trevor Bal & Carl Moon
+     *@Since 3-1-17
      */
     public String getMedicaidNumber() {
         return medicaidNumber;
@@ -101,6 +118,12 @@ public class Patient {
 /******************************************************************************************
 * 
 * Patient display for testing.
+
+*Description dispaly will dispaly all the returns from the previous get method : it will display Patient Id ,FirstName,LastName,Insurance,And Medicaid .
+*@ return PatientId, FirstName,LastName,Insuarance Co,Medicaid Number 
+ *@ Author Trevor Bal & Carl Moon
+ *@Since 3-1-17
+
  *****************************************************************************************/
     public void display()
     {
@@ -115,9 +138,11 @@ public class Patient {
     
 /******************************************************************************************
 * SelectDB() Method
-* This selectDB method select a patient by their patient ID number
-* Carl Moon II 3-2-17 - Changed the local var to not match the global var. Corrected 
+* @Description This selectDB method select a patient by their patient ID number
+*@param pID is Patient Id
+*@Author Carl Moon - Changed the local var to not match the global var. Corrected 
 * int's to strings.
+*@since 3-2-17
 *****************************************************************************************/
 public void selectDB(String pId) throws SQLException
 {
@@ -126,8 +151,10 @@ public void selectDB(String pId) throws SQLException
     
     Connection con1 = null;
     PreparedStatement ps = null;
+ //** sql will select from the patient database the specifice PatientID */
     
     String sql = "Select * from patient where PatientID = ?";
+ 
     
         try
         {
@@ -167,12 +194,19 @@ public void selectDB(String pId) throws SQLException
 }// end public void selectDB
 
 /*******************************************************************************
-* Insert method will put patient info into the DeRichie web application.
+*@Description  Insert method will put patient info into the DeRichie web application.
 * Inserts into the Participant table.
-* 3-2-17 Changed the local var's so that they were not the same as the global
+* Changed the local var's so that they were not the same as the global
 * var's. I also corrected the number of place holders to match the number of
 * var's being inserted into the database. Corrected int's to strings.
-* 
+@Author Carl Moon. 
+@param pID Patient Id.
+@param fn First Name.
+@param ln Last Name. 
+@ param ins Insurance.
+@param mednum Medecaid Number.
+@Since3-2-17 .
+
 *******************************************************************************/
 
 public void insertDB(String pId, String fn, String ln, String ins, String mednum) throws SQLException
