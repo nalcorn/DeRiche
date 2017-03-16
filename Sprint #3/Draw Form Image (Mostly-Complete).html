@@ -1,0 +1,136 @@
+ <html>
+    <script type="text/javascript">
+    var canvas, canvas2, ctx, ctx2, flag = false,
+        prevX = 0,
+        currX = 0,
+        prevY = 0,
+        currY = 0,
+        dot_flag = false;
+
+    var x = "black",
+        y = 2;
+    
+    function init() {
+        canvas = document.getElementById('layer1');
+        ctx = canvas.getContext("2d");
+        w = canvas.width;
+        h = canvas.height;
+        canvas
+
+        img = new Image();
+        img.src = 'check.png';         
+        img.onload = function(){
+          canvas2 = document.getElementById('layer2');
+          ctx2 = canvas2.getContext("2d");
+          ctx2.drawImage(img,0,0);
+        }
+    
+        canvas.addEventListener("mousemove", function (e) {
+            findxy('move', e)
+        }, false);
+        canvas.addEventListener("mousedown", function (e) {
+            findxy('down', e)
+        }, false);
+        canvas.addEventListener("mouseup", function (e) {
+            findxy('up', e)
+        }, false);
+        canvas.addEventListener("mouseout", function (e) {
+            findxy('out', e)
+        }, false);
+    }
+    
+    function color(obj) {
+
+        y = 2;
+        ctx.globalCompositeOperation = "source-over";
+
+        if (obj.id == "black") {
+            x = "black";
+
+        } else if (obj.id == "blue") {
+            x = "blue";
+
+        } else {
+            x = "white";
+            y = 14;
+            ctx.globalCompositeOperation = "destination-out";
+        }
+    }
+    
+    function draw() { 
+        ctx.beginPath();
+        ctx.moveTo(prevX, prevY);
+        ctx.lineTo(currX, currY);
+        ctx.strokeStyle = x;
+        ctx.lineWidth = y;
+        ctx.stroke();
+        ctx.closePath();
+    }
+    
+    function erase() {
+
+        var m = confirm("Want to clear");
+
+        if (m) {
+            ctx.clearRect(0, 0, w, h);
+            document.getElementById("canvasimg").style.display = "none";
+        }
+    }
+    
+    function save() {
+        var dataURL = canvas.toDataURL();
+        alert(dataURL);
+
+        canvas3 = document.getElementById('finish');
+        ctx3 = canvas3.getContext("2d");
+        ctx3.drawImage(canvas2, 0, 0);
+        ctx3.drawImage(canvas, 0, 0);
+    }
+    
+    function findxy(res, e) {
+        if (res == 'down') {
+            prevX = currX;
+            prevY = currY;
+            currX = e.clientX - canvas.offsetLeft;
+            currY = e.clientY - canvas.offsetTop;
+    
+            flag = true;
+            dot_flag = true;
+            if (dot_flag) {
+                ctx.beginPath();
+                ctx.fillStyle = x;
+                ctx.fillRect(currX, currY, 2, 2);
+                ctx.closePath();
+                dot_flag = false;
+            }
+        }
+
+        if (res == 'up' || res == "out") {
+            flag = false;
+        }
+
+        if (res == 'move') {
+            if (flag) {
+                prevX = currX;
+                prevY = currY;
+                currX = e.clientX - canvas.offsetLeft;
+                currY = e.clientY - canvas.offsetTop;
+                draw();
+            }
+        }
+    }
+    </script>
+    <body onload="init()">
+        <canvas id="layer2" width="673" height="514" style="position:absolute;top:50px;left:50px;border:2px solid;"></canvas>
+        <canvas id="layer1" width="673" height="514" style="position:absolute;top:50px;left:50px;border:2px solid;"></canvas>
+        <canvas id="finish" width="673" height="514" style="position:absolute;top:800px;left:50px;border:2px solid;"></canvas>
+        <div style="position:absolute;top:570px;left:43%;">Choose Color</div>
+        <div style="position:absolute;top:615px;left:45%;width:10px;height:10px;background:black;" id="black" onclick="color(this)"></div>
+        <div style="position:absolute;top:615px;left:46%;width:10px;height:10px;background:blue;" id="blue" onclick="color(this)"></div>
+        <div style="position:absolute;top:700px;left:43%;">Eraser</div>
+        <div style="position:absolute;top:730px;left:45%;width:15px;height:15px;background:white;border:2px solid;" id="white" onclick="color(this)"></div>
+        <img id="canvasimg" style="position:absolute;top:10%;left:52%;" style="display:none;"><br><br>
+        <input type="button" value="save" id="btn" size="30" onclick="save()" style="position:absolute;top:570px;left:10%;">
+        <input type="button" value="clear" id="clr" size="23" onclick="erase()" style="position:absolute;top:570px;left:15%;">
+    </body>
+    </html>
