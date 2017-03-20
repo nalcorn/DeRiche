@@ -1,5 +1,6 @@
 /******************************************************************************************
-* @author Carl Moon 3-28-17
+* @author Carl Moon
+*@3-28-17
 * User business object for DeRichie web app.
 *****************************************************************************************/
 package Business;
@@ -14,7 +15,9 @@ import java.sql.PreparedStatement;
 
 /******************************************************************************************
 * 
-* User main class for DeRichie web app.
+* @ description User main class for DeRichie web app.
+
+
 *****************************************************************************************/
 public class User 
 {
@@ -63,7 +66,7 @@ public class User
     }
 
     /**
-     * @param userName the userName to set
+     * @param userName the userName to set user name
      */
     public void setUserName(String userName) 
     {
@@ -108,7 +111,7 @@ public class User
     }
 
     /**
-     * @param fn the fn to set
+     * @param fn set first name
      */
     public void setFn(String fn) 
     {
@@ -116,7 +119,7 @@ public class User
     }
 
     /**
-     * @return the ln
+     * @return the ln last name
      */
     public String getLn() 
     {
@@ -124,7 +127,7 @@ public class User
     }
 
     /**
-     * @param ln the ln to set
+     * @param ln set last name
      */
     public void setLn(String ln) 
     {
@@ -140,7 +143,7 @@ public class User
     }
 
     /**
-     * @param t the t to set
+     * @param t set the title
      */
     public void setT(String t) 
     {
@@ -148,7 +151,7 @@ public class User
     }
 
     /**
-     * @return the c
+     * @return the c clearence
      */
     public String getC() 
     {
@@ -156,7 +159,7 @@ public class User
     }
 
     /**
-     * @param c the c to set
+     * @param c set c clearence
      */
     public void setC(String c) 
     {
@@ -165,7 +168,8 @@ public class User
     
 /******************************************************************************************
  * 
-* User display for testing.
+*  User display for testing.
+*@description it dispalys user id,user name,password,pin,first anme ,last name,title,and clearense 
  *****************************************************************************************/
     public void display()
     {
@@ -182,7 +186,9 @@ public class User
     }//end display
 /******************************************************************************************
 * SelectDB() Method
-* This selectDB method will go in to the Appointments table in the Dentist DB.
+*@ description This selectDB method will go in to the Appointments table in the Dentist DB.
+*@param un user id
+*@throws SQLException
 *****************************************************************************************/
 public void selectDB(String un) throws SQLException
 {
@@ -234,8 +240,12 @@ public void selectDB(String un) throws SQLException
            
 }// end public void selectDB
 /*******************************************************************************
-* Insert method will put user info into the DeRichie web app.
-* Inserts into the User table.
+*@description Insert method will put user info into the DeRichie web app.
+*@description Inserts into the User table.
+*@param ui user id
+*@param  un user name
+*@param pass password
+*@param 
 *******************************************************************************/
 
 public void insertDB(String ui, String un, String r, String p, String f, String l, String T, String C) throws SQLException
