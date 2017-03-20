@@ -269,10 +269,12 @@ public void insertDB(String pId, String fn, String ln, String ins, String mednum
 }// end public void insertDB
 
 /******************************************************************************************
-** updateDBAdmin() Method
-* This will allow the administrator to update
-* the user table in the in the DeRichie DB. Corrected 
-* int's to strings.
+**@description updateDBAdmin() Method
+* @ descrioption This will allow the administrator to update, the user table in the in the DeRichie DB. Corrected  int's to strings.
+@ throws SQLException 
+@author Carl Moon
+@ since 3-1-2017
+
 *****************************************************************************************/
 public void updateDBAdmin() throws SQLException
 {
@@ -327,10 +329,13 @@ public void updateDBAdmin() throws SQLException
     }
 }//end updateDB
 /******************************************************************************************
-* updateDB() Method
-* This updateDB method will allow a non admin
-* user to update the user table with limited access in the in the DeRichie DB.
-* Corrected int's to strings.
+*@ describtion: updateDB() Method
+*@ description : This updateDB method will allow a non admin
+*@ description :user to update the user table with limited access in the in the DeRichie DB.
+* @ description :Corrected int's to strings.
+@ since 3-1-2017
+@author Carl Moon 
+@ catch SQLException e
 *****************************************************************************************/
 public void updateDB() throws SQLException
 {
@@ -385,9 +390,11 @@ public void updateDB() throws SQLException
 }//end updateDBAdmin
 
 /******************************************************************************************
-* deleteDB() Method
-* This deleteDB method will go in to participant table.
-* Carl Moon II 3-1-17 Corrected int's to strings.
+* @ description deleteDB() Method
+* @ description This deleteDB method will go in to participant table.
+* @ authorCarl Moon
+@sinceII 3-1-17 Corrected int's to strings.
+@throw sql exception SQLException.
 *****************************************************************************************/
 public void deleteDB() throws SQLException
 {
@@ -451,10 +458,14 @@ public void deleteDB() throws SQLException
 public static void main(String[] args)
 {
 /*******************************************************************************
- * Carl Moon II 3-2-17 I corrected the tests for all database actions. The 
- * RUD's of CRUD. I confirmed that the all database test work.Corrected 
-* int's to strings.
- ******************************************************************************/
+ * @ author Carl Moon 
+ *@since 3-2-17 
+ @ description I corrected the tests for all database actions. The  RUD's of CRUD. I confirmed that the all database test work.Corrected , int's to strings.
+ @ throws SQLException
+ @catch SQL EXception
+ 
+******************************************************************************/
+ 
    /*
 //Testing selectDB(String p1)
      try
