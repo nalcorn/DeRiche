@@ -1,5 +1,7 @@
 /******************************************************************************************
-* @author Trevor Bal & Carl Moon II 3-1-17
+* @author Trevor Bal & Carl Moon II
+*@since3-1-17
+*@author Yasmina Rabhi addeed documentation 3-20-2017
 * patient business object for DeRichie web app.
 * version 1.1
 *****************************************************************************************/
