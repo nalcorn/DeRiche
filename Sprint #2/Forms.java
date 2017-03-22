@@ -1,7 +1,9 @@
 /******************************************************************************************
-* @author Trevor Bal 3-6-17
-* Forms business object for DeRichie web app.
-* version 1.0
+* @author Trevor Bal 
+*@author yasmina Rabhi added documentation.
+*@since3-6-17
+*@description Forms business object for DeRichie web app.
+*@version 1.0
 *****************************************************************************************/
 package Business;
 
@@ -13,7 +15,7 @@ import java.sql.SQLException;
 
 /******************************************************************************************
 * 
-* Forms main class for DeRichie web application.
+* @description Forms main class for DeRichie web application.
 *****************************************************************************************/
 public class Forms {
 
