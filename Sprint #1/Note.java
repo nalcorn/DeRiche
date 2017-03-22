@@ -1,7 +1,9 @@
 /******************************************************************************************
-* @author Carl Moon II 3-3-17
-* Note business object for DeRichie web app.
-* version 1.0
+* @author Carl Moon II.
+*@author Yasmina Rabhi added documentation
+*@since 3-3-17.
+*@description Note business object for DeRichie web app.
+* @version 1.0
 *****************************************************************************************/
 package Business;
 
@@ -13,7 +15,7 @@ import java.sql.SQLException;
 
 /******************************************************************************************
 * 
-* Note main class for DeRichie web application.
+* @description Note main class for DeRichie web application.
 *****************************************************************************************/
 public class Note {
     
@@ -211,7 +213,7 @@ public class Note {
     
 /******************************************************************************************
 *   
-* User display for testing.
+* @ description User display for testing.
  *****************************************************************************************/
     public void display()
     {
@@ -232,7 +234,8 @@ public class Note {
     }//end display
 /******************************************************************************************
 * SelectDB() Method
-* This selectDB method will go in to the Appointments table in the Dentist DB.
+*@description  This selectDB method will go in to the Appointments table in the Dentist DB.
+*@param nid note ID
 *****************************************************************************************/
 public void selectDB(String nid) throws SQLException
 {
@@ -288,8 +291,20 @@ public void selectDB(String nid) throws SQLException
            
 }// end public void selectDB
 /*******************************************************************************
-* Insert method will put user info into the DeRichie web app.
-* Inserts into the note table.
+* @description Insert method will put user info into the DeRichie web app.
+* @description Inserts into the note table.
+*@param n1 notes
+*@param ts time started
+*@param lu last update
+*@param tus time submitted
+*@param ta time accepted
+*@param c Comments
+*@param s submitted
+*@param tra time reviewer accepted
+*@param nra note reviewer accepted
+*@param  pid patient ID 
+*@param uid User ID
+
 *******************************************************************************/
 
 public void insertDB(String n1, String ts, String lu, String tus, String ta, String c, String s, String tra, String nra, String pid, String uid) throws SQLException
@@ -366,8 +381,8 @@ public void insertDB(String n1, String ts, String lu, String tus, String ta, Str
 }// end public void insertDB
 /******************************************************************************************
 ** updateDBAdmin() Method
-* This will allow the admin to update
-* the note table in the in the DeRichie DB.
+* @description This will allow the admin to update
+*@description the note table in the in the DeRichie DB.
 *****************************************************************************************/
 public void updateDBAdmin() throws SQLException
 {
@@ -429,8 +444,8 @@ public void updateDBAdmin() throws SQLException
     }
 }//end updateDBAdmin
 /******************************************************************************************
-* deleteDB() Method
-* This deleteDB method will go in to the  table in the Dentist DB.
+*@description  deleteDB() Method
+* @description This deleteDB method will go in to the  table in the Dentist DB.
 *****************************************************************************************/
 public void deleteDB() throws SQLException
 {
