@@ -19,19 +19,21 @@ import java.sql.SQLException;
 *****************************************************************************************/
 public class Forms {
 
-    
+    //form ID
     private String formID;
-    
+    //user ID
     private String userID;
-    
+   
+    // patient ID
     private String patientID;
     
+    // form type
     private String formType;
-    
+    //form info
     private String formInfo;
-    
+    //date
     private String date;
-    
+    //revision
     private String revision1;
     
 
@@ -134,7 +136,7 @@ public class Forms {
     
 /******************************************************************************************
 *   
-* Forms display for testing.
+*@description  Forms display for testing.
  *****************************************************************************************/
     public void display()
     {
@@ -150,7 +152,7 @@ public class Forms {
     }//end display
 /******************************************************************************************
 * SelectDB() Method
-* 
+* @param fid form ID 
 *****************************************************************************************/
 public void selectDB(String fid) throws SQLException
 {
@@ -200,8 +202,14 @@ public void selectDB(String fid) throws SQLException
            
 }// end public void selectDB
 /*******************************************************************************
-* Insert method will put forms info into the DeRichie web app.
-* Inserts into the forms table.
+* @description Insert method will put forms info into the DeRichie web app.
+* @description Inserts into the forms table.
+*@param uid user ID
+*@param pid patient ID
+*@param ft form type
+*@param fi form info
+*@param dt date
+*@param r1 revision 
 *******************************************************************************/
 
 public void insertDB(String uid, String pid, String ft, String fi, String dt, String r1) throws SQLException
@@ -265,8 +273,8 @@ public void insertDB(String uid, String pid, String ft, String fi, String dt, St
 }// end public void insertDB
 /******************************************************************************************
 ** updateDBAdmin() Method
-* This will allow the admin to update
-* the forms table in the in the DeRichie DB.
+*@description  This will allow the admin to update
+* @description the forms table in the in the DeRichie DB.
 *****************************************************************************************/
 public void updateDBAdmin() throws SQLException
 {
@@ -321,7 +329,7 @@ public void updateDBAdmin() throws SQLException
 }//end updateDBAdmin
 /******************************************************************************************
 * deleteDB() Method
-* This deleteDB method will go in to the forms table in the Deriche DB.
+* @description This deleteDB method will go in to the forms table in the Deriche DB.
 *****************************************************************************************/
 public void deleteDB() throws SQLException
 {
