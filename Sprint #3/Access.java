@@ -102,7 +102,7 @@ public abstract class Access implements Accessible {
 	}
 	
 	/**
-	 * Closes any fields in the child class that were opened by openFields().
+	 * @ description Closes any fields in the child class that were opened by openFields().
 	 * 
 	 * @param fields The array of {@link java.reflect.Field} objects representing the child class' attributes
 	 * @throws FieldsNotAccessedException if the fields passed were already in a closed state
