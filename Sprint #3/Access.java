@@ -4,8 +4,8 @@ import java.lang.reflect.Field;
 import java.sql.PreparedStatement;
 
 /**
- * A class used for allowing business objects to access a typical relational database.<br>
- * Classes are only allowed to extend the {@link dataAccess.Access} class. Any class inheriting from it must follow the conventions listed below.<br><br>
+ * @description a class used for allowing business objects to access a typical relational database.<br>
+ * @description Classes are only allowed to extend the {@link dataAccess.Access} class. Any class inheriting from it must follow the conventions listed below.<br><br>
  * 
  * <ol>
  *   <li>The simple class name, retrieved from using Class.getSimpleName(), must match the name of the table in the database.</li>
@@ -16,7 +16,7 @@ import java.sql.PreparedStatement;
  * Any class following these rules may use the {@link dataAccess.DBConnection} class' static methods for accessing database tables.
  * 
  * @author Cameron Randolph
- * 
+ * @author Yasnmina Rabhi added documentation
  * @see Accessible
  * @see DBConnection
  */
@@ -25,7 +25,7 @@ public abstract class Access implements Accessible {
 	private boolean[] privacy;
 	
 	/**
-	 * Sets all designated parameters for a {@link java.sql.PreparedStatement}.
+	 *@description  Sets all designated parameters for a {@link java.sql.PreparedStatement}.
 	 * 
 	 * @author Cameron Randolph
 	 * 
@@ -76,7 +76,7 @@ public abstract class Access implements Accessible {
 	}
 	
 	/**
-	 * Opens any fields in the child class that are declared as private.
+	 * @ description Opens any fields in the child class that are declared as private.
 	 * 
 	 * @param fields The array of {@link java.reflect.Field} objects representing the child class' attributes
 	 * @throws FieldsNotAccessedException if the fields passed were already in an open state
@@ -123,8 +123,8 @@ public abstract class Access implements Accessible {
 	}
 	
     /**
-     * Retrieves the primary key index for the class implementing the Accessible interface.<br>
-     * The index refers to the order of variable declaration in the class' global variables list.
+     * @description Retrieves the primary key index for the class implementing the Accessible interface.<br>
+     * @description The index refers to the order of variable declaration in the class' global variables list.
      * 
      * @author Cameron Randolph
      * 
@@ -135,9 +135,10 @@ public abstract class Access implements Accessible {
         }
 	
     /**
-     * Thrown to indicate that this class' fields have not been properly opened or closed when either openFields() or closeFields() is called.
-     * 
-     * @author Cameron Randolph
+     * @description Thrown to indicate that this class' fields have not been properly opened or closed when either openFields() or closeFields() is called.
+     * @throws Exception .
+     * @author Cameron Randolph.
+     * @since 3-22-17.
      */
     public static class FieldsNotAccessedException extends Exception {
     	
