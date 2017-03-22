@@ -3,7 +3,7 @@ package dataAccess;
 import java.sql.PreparedStatement;
 
 /**
- * The {@link dataAccess.Accessible} interface allows objects to use methods from the {@link dataAccess.DBConnection} class.<br>
+ * @ description The {@link dataAccess.Accessible} interface allows objects to use methods from the {@link dataAccess.DBConnection} class.<br>
  * Any class implementing {@link dataAccess.Accessible} must follow the conventions listed below.<br><br>
  * 
  * <ol>
@@ -26,9 +26,10 @@ import java.sql.PreparedStatement;
  * Any class following these rules may use the {@link dataAccess.DBConnection} class' static methods for accessing database tables.<br><br>
  * 
  * 
- * Date: 3/01/2017
+ * @since  3/01/2017
  *
  * @author Cameron Randolph
+ *@author Yasmina Rabhi added documentation.
  *
  * @version 1.2
  * 
@@ -38,7 +39,7 @@ import java.sql.PreparedStatement;
 public interface Accessible {
 
 	/**
-	 * Sets all designated parameters for a {@link java.sql.PreparedStatement}.
+	 *@ description  Sets all designated parameters for a {@link java.sql.PreparedStatement}.
 	 * 
 	 * @author Cameron Randolph
 	 * 
@@ -50,7 +51,7 @@ public interface Accessible {
     public abstract PreparedStatement setStatementValues(PreparedStatement statement, Object[] values);
     
     /**
-     * Retrieves the primary key index for the class implementing the Accessible interface.
+     * @description Retrieves the primary key index for the class implementing the Accessible interface.
      * The index refers to the order of variable declaration in the class' global variables list.
      * 
      * @author Cameron Randolph
