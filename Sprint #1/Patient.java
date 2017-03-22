@@ -2,8 +2,8 @@
 * @author Trevor Bal & Carl Moon II
 *@since3-1-17
 *@author Yasmina Rabhi addeed documentation 3-20-2017
-* patient business object for DeRichie web app.
-* version 1.1
+* @descriptionpatient business object for DeRichie web app.
+* @version 1.1
 *****************************************************************************************/
 package Business;
 
@@ -142,8 +142,7 @@ public class Patient {
 * SelectDB() Method
 * @Description This selectDB method select a patient by their patient ID number
 *@param pID is Patient Id
-*@Author Carl Moon - Changed the local var to not match the global var. Corrected 
-* int's to strings.
+*@Author Carl Moon - Changed the local var to not match the global var. Corrected int's to strings.
 *@since 3-2-17
 *****************************************************************************************/
 public void selectDB(String pId) throws SQLException
@@ -197,17 +196,17 @@ public void selectDB(String pId) throws SQLException
 
 /*******************************************************************************
 *@Description  Insert method will put patient info into the DeRichie web application.
-* Inserts into the Participant table.
-* Changed the local var's so that they were not the same as the global
-* var's. I also corrected the number of place holders to match the number of
-* var's being inserted into the database. Corrected int's to strings.
-@Author Carl Moon. 
-@param pID Patient Id.
-@param fn First Name.
-@param ln Last Name. 
-@ param ins Insurance.
-@param mednum Medecaid Number.
-@Since3-2-17 .
+*@description Inserts into the Participant table.
+*@description Changed the local var's so that they were not the same as the global
+*@description var's. I also corrected the number of place holders to match the number of
+*@description var's being inserted into the database. Corrected int's to strings.
+*@Author Carl Moon. 
+*@param pID Patient Id.
+*@param fn First Name.
+*@param ln Last Name. 
+*@ param ins Insurance.
+*@param mednum Medecaid Number.
+*@Since3-2-17 .
 
 *******************************************************************************/
 
@@ -273,9 +272,9 @@ public void insertDB(String pId, String fn, String ln, String ins, String mednum
 /******************************************************************************************
 **@description updateDBAdmin() Method
 * @ descrioption This will allow the administrator to update, the user table in the in the DeRichie DB. Corrected  int's to strings.
-@ throws SQLException 
-@author Carl Moon
-@ since 3-1-2017
+*@ throws SQLException 
+*@author Carl Moon
+*@ since 3-1-2017
 
 *****************************************************************************************/
 public void updateDBAdmin() throws SQLException
@@ -335,9 +334,9 @@ public void updateDBAdmin() throws SQLException
 *@ description : This updateDB method will allow a non admin
 *@ description :user to update the user table with limited access in the in the DeRichie DB.
 * @ description :Corrected int's to strings.
-@ since 3-1-2017
-@author Carl Moon 
-@ catch SQLException e
+*@ since 3-1-2017
+*@author Carl Moon 
+*@ catch SQLException e
 *****************************************************************************************/
 public void updateDB() throws SQLException
 {
@@ -395,8 +394,8 @@ public void updateDB() throws SQLException
 * @ description deleteDB() Method
 * @ description This deleteDB method will go in to participant table.
 * @ authorCarl Moon
-@sinceII 3-1-17 Corrected int's to strings.
-@throw sql exception SQLException.
+*@sinceII 3-1-17 Corrected int's to strings.
+*@throw sql exception SQLException.
 *****************************************************************************************/
 public void deleteDB() throws SQLException
 {
@@ -462,9 +461,9 @@ public static void main(String[] args)
 /*******************************************************************************
  * @ author Carl Moon 
  *@since 3-2-17 
- @ description I corrected the tests for all database actions. The  RUD's of CRUD. I confirmed that the all database test work.Corrected , int's to strings.
- @ throws SQLException
- @catch SQL EXception
+* @ description I corrected the tests for all database actions. The  RUD's of CRUD. I confirmed that the all database test work.Corrected , int's to strings.
+ *@ throws SQLException
+ *@catch SQL EXception
  
 ******************************************************************************/
  
