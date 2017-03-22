@@ -10,10 +10,10 @@ import java.sql.SQLException;
 import dataAccess.Accessible;
 
 /**
- * The {@link dataAccess.DBConnection} class contains all the methods needed for database access in the DeRiche project.<br>
+ * @description The {@link dataAccess.DBConnection} class contains all the methods needed for database access in the DeRiche project.<br>
  * Any class accessing a database through {@link dataAccess.DBConnection} will need to either implement {@link dataAccess.Accessible} or extend {@link dataAccess.Access}. Only classes doing one of these two steps will be able to properly call any methods from this class.<br><br>
  *
- * Date: 2/23/2017
+ * @since 2/23/2017
  *
  * @author Cameron Randolph
  * @author Carl Moon
@@ -27,32 +27,32 @@ import dataAccess.Accessible;
 public final class DBConnection {
 
     /**
-     * The Select identifier for database operations
+     * @description the Select identifier for database operations
      */
     public static final char SELECT = 'S';
     /**
-     * The Insert identifier for database operations
+     * @description The Insert identifier for database operations
      */
     public static final char INSERT = 'I';
     /**
-     * The Update identifier for database operations
+     *@description  The Update identifier for database operations
      */
     public static final char UPDATE = 'U';
     /**
-     * The Delete identifier for database operations
+     * @description The Delete identifier for database operations
      */
     public static final char DELETE = 'D';
     /**
-     * The database connection
+     * @description The database connection
      */
     private static String connection = "jdbc:odbc:JavaDB2";
     /**
-     * The database driver
+     * @description The database driver
      */
     private static String driver = "sun.jdbc.odbc.JdbcOdbcDriver";
     
     /**
-     * Changes the value of connection from the default.
+     * @description Changes the value of connection from the default.
      * 
      * @param connection the {@link java.lang.String} representing the new connection
      */
@@ -61,7 +61,7 @@ public final class DBConnection {
     }
     
     /**
-     * Changes the value of driver from the default.
+     *@description  Changes the value of driver from the default.
      * 
      * @param driver the {@link java.lang.String} representing the new driver
      */
@@ -70,7 +70,7 @@ public final class DBConnection {
     }
     
     /**
-     * Returns the value stored in the connection variable.
+     *@description  Returns the value stored in the connection variable.
      * 
      * @return a {@link java.lang.String} representing the database connection
      */
@@ -79,7 +79,7 @@ public final class DBConnection {
     }
     
     /**
-     * Returns the value stored in the driver variable.
+     * @description Returns the value stored in the driver variable.
      * 
      * @return a {@link java.lang.String} representing the database driver
      */
@@ -88,7 +88,7 @@ public final class DBConnection {
     }
     
     /**
-     * Handles all select statements required by the DeRiche business objects.<br>
+     * @description Handles all select statements required by the DeRiche business objects.<br>
      * This method has the ability to select any value from the database described in the establish() method and return it as an {@link java.lang.Object}.
      *
      * @author Carl Moon
@@ -105,6 +105,7 @@ public final class DBConnection {
      * 
      * @throws SQLException if a database access error occurs
      * @throws ClassNotFoundException if the Driver for the database cannot be found
+     *@since 3-21-17.
      */
     public static Object[] selectDB(String sql, String var) throws SQLException, ClassNotFoundException {
         
@@ -134,11 +135,12 @@ public final class DBConnection {
     }
     
     /**
-     * Handles all select statements required by the DeRiche business objects.<br>
+     * @description Handles all select statements required by the DeRiche business objects.<br>
      * This method has the ability to select rows from the database described in the establish() method.
      *
      * @author Carl Moon
      * @author Cameron Randolph
+     *@since 3-22-17
      *
      * @param object the {@link dataAccess.Accessible} object representation of a table in a database for which a select command is to be made
      * @param value the primary key of the table represented by the {@link dataAccess.Accessible} object. Used to set the designated parameter of the {@link java.sql.PreparedStatement}
@@ -191,10 +193,11 @@ public final class DBConnection {
     }
     
     /**
-     * Handles all insert statements required by the DeRiche business objects.<br>
+     * @description Handles all insert statements required by the DeRiche business objects.<br>
      * This method has the ability to insert rows into the database described in the establish() method.
      *
      * @author Cameron Randolph
+     *@since 3-22-17.
      *
      * @param object the {@link dataAccess.Accessible} object representation of a table in a database for which an insert command is to be made
      * @param values the values to be added to the {@link java.sql.PreparedStatement} as designated parameters
@@ -241,7 +244,7 @@ public final class DBConnection {
     
     /**
      * Handles all update statements required by the DeRiche business objects.<br>
-     * This method has the ability to update rows in the database described in the establish() method.
+     * @description This method has the ability to update rows in the database described in the establish() method.
      * 
      * @param object the {@link dataAccess.Accessible} object representation of a table in a database for which a delete command is to be made
      * @param value the primary key of the table represented by the {@link dataAccess.Accessible} object. Used to set the designated parameter of the {@link java.sql.PreparedStatement}
@@ -288,8 +291,8 @@ public final class DBConnection {
     }
     
     /**
-     * Handles all delete statements required by the DeRiche business objects.<br>
-     * This method has the ability to delete rows in the database described in the establish() method.
+     * @descrtiption Handles all delete statements required by the DeRiche business objects.<br>
+     * @description This method has the ability to delete rows in the database described in the establish() method.
      * 
      * @param object the {@link dataAccess.Accessible} object representation of a table in a database for which an update command is to be made
      * @param value the primary key of the table represented by the {@link dataAccess.Accessible} object. Used to set the designated parameter of the {@link java.sql.PreparedStatement}
@@ -332,7 +335,7 @@ public final class DBConnection {
     }
 
     /**
-     * Generates SQL commands for the {@link dataAccess.Accessible} object passed as a parameter.
+     * @description Generates SQL commands for the {@link dataAccess.Accessible} object passed as a parameter.
      * 
      * @param object the {@link dataAccess.Accessible} object representation of a table in a database for which an SQL statement is to be made
      * @param var the char representation of the type of action to be taken when invoking this method
@@ -409,8 +412,8 @@ public final class DBConnection {
     }
     
     /**
-     * Retrieves the class name from the object passed to it.<br>
-     * This method only gives the name of the class. Any packages listed in the full class name are removed from the return value.
+     * @description Retrieves the class name from the object passed to it.<br>
+     * @description This method only gives the name of the class. Any packages listed in the full class name are removed from the return value.
      *
      * @return a {@link java.lang.String} representing the name of the class
      * 
@@ -431,7 +434,7 @@ public final class DBConnection {
     }
     
     /**
-     * Establishes a connection to the DeRiche database for every method in the {@link dataAccess.DBConnection} class.
+     * @description Establishes a connection to the DeRiche database for every method in the {@link dataAccess.DBConnection} class.
      *
      * @return a {@link java.sql.Connection} already linked to the DeRiche database
      * 
@@ -445,7 +448,7 @@ public final class DBConnection {
     }
     
     /**
-     * Thrown to indicate that the overridden setStatementValues method from {@link dataAccess.Accessible} is not properly implemented.
+     *@description  Thrown to indicate that the overridden setStatementValues method from {@link dataAccess.Accessible} is not properly implemented.
      * 
      * @author Cameron Randolph
      */
