@@ -1,7 +1,8 @@
 /******************************************************************************************
-* @author Carl Moon
-*@3-28-17
-* User business object for DeRichie web app.
+* @author Carl Moon, documentaion Yasmina Rabhi
+*@since 3-28-17
+* @description User business object for DeRichie web app.
+*
 *****************************************************************************************/
 package Business;
 
@@ -81,7 +82,7 @@ public class User
     }
 
     /**
-     * @param pass the pass to set
+     * @param pass the pass to set the password
      */
     public void setPass(String pass) {
         this.pass = pass;
@@ -96,7 +97,7 @@ public class User
     }
 
     /**
-     * @param pin the pin to set
+     * @param pin tomset the pin
      */
     public void setPin(String pin) 
     {
@@ -243,9 +244,14 @@ public void selectDB(String un) throws SQLException
 *@description Insert method will put user info into the DeRichie web app.
 *@description Inserts into the User table.
 *@param ui user id
-*@param  un user name
-*@param pass password
-*@param 
+*@param un user name
+*@param r password
+*@param p pin
+*@param f first name
+*@param l last name
+*@param t title 
+*@param c clerance
+*@throws SQLException e
 *******************************************************************************/
 
 public void insertDB(String ui, String un, String r, String p, String f, String l, String T, String C) throws SQLException
@@ -312,9 +318,9 @@ public void insertDB(String ui, String un, String r, String p, String f, String 
     }
 }// end public void insertDB
 /******************************************************************************************
-** updateDBAdmin() Method
-* This will allow the admin to update
-* the user table in the in the DeRichie DB.
+** @description updateDBAdmin() Method
+* @description This will allow the admin to update
+* @description the user table in the in the DeRichie DB.
 *****************************************************************************************/
 public void updateDBAdmin() throws SQLException
 {
@@ -373,8 +379,7 @@ public void updateDBAdmin() throws SQLException
 }//end updateDB
 /******************************************************************************************
 * updateDB() Method
-* This updateDB method will allow a non admin
-* user to update the user table with limited access in the in the DeRichie DB.
+* @description This updateDB method will allow a non admin  user to update the user table with limited access in the in the DeRichie DB.
 *****************************************************************************************/
 public void updateDB() throws SQLException
 {
