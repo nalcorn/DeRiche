@@ -18,6 +18,8 @@
             <input type="text" name="firstName"><br>
             Patient Last Name:<br>
             <input type="text" name="lastName"><br>
+            Patient ID:<br>
+            <input type="text" name="patId"><br>
             Explain what happened:<br>
             <textarea name="what" rows="4" cols="50">
             </textarea><br>
