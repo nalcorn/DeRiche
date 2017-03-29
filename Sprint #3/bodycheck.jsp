@@ -13,13 +13,12 @@
     </head>
     <body>
         <h1>CANVAS WOULD GO HERE</h1>
-        <form>
+        <form action="#" method="post">
+            
             Patient First Name:<br>
             <input type="text" name="firstName"><br>
             Patient Last Name:<br>
             <input type="text" name="lastName"><br>
-            Patient ID:<br>
-            <input type="text" name="patId"><br>
             Explain what happened:<br>
             <textarea name="what" rows="4" cols="50">
             </textarea><br>
@@ -36,6 +35,7 @@
             Recommendations for follow up:<br>
             <textarea  name ="recommend" rows="4" cols="50">
             </textarea><br>
+            
         <h1>SIGNATURE SECTION WOULD GO HERE</h1>
         
          <input type="submit" value="Submit"/>  <input type="reset" value="Clear"/>
