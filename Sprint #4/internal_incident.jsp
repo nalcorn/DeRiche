@@ -20,7 +20,7 @@
     </head>
     <body>
         <h1>Internal Incident Report</h1>
-        <form>
+        <form action="#" method="post">
         <table id="t01">
         <tr>
             <td>
