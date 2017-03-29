@@ -29,7 +29,7 @@
             </td>
             <td>
                 Time of Incident:
-                <input type="text" name="incidenttime">
+                <input type="time" name="incidenttime">
             </td>
             <td>
                 Patient Name:
@@ -55,7 +55,7 @@
             </td>
             <td>
                 Time:
-                <input type="text" name="time">
+                <input type="time" name="time">
             </td>
         </tr>
         </table>
@@ -102,6 +102,15 @@
         </table>
         <p>If "Other" in any section, please describe below:</p>
         <textarea name="other" rows="2" cols="50"></textarea><br>
+        <h3>Classification of Incident (Check any that apply)</h3>
+        <input type="checkbox" name="sib" value="SIB">SIB<br>
+        <input type="checkbox" name="attention" value="Attention Seeking">Attention Seeking<br>
+        <input type="checkbox" name="security" value="Security">Security<br>
+        <input type="checkbox" name="other2" value="Other">Other<br>
+        <input type="checkbox" name="minor" value="Minor">Minor<br>
+        <input type="checkbox" name="mild" value="Mild">Mild<br>
+        <input type="checkbox" name="moderate" value="Moderate">Moderate<br>
+        <input type="checkbox" name="major" value="Major">Major<br>
         <h3>Location of Injury</h3>
         <p>Mark on the figures the general area of any cuts, scratches, marks or bruises possibly relating to the incident/accident.</p>
         <h1>CANVAS AREA WOULD GO HERE</h1>
