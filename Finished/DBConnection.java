@@ -155,7 +155,7 @@ public final class DBConnection {
      *
      * @return an {@link java.lang.Object} array holding all values selected from the database
      */
-    public static Object[] select(Accessible object, Object value) {
+    public static Object[] select(Accessible object, Object value, boolean set) {
     	
         int columnCount;
         
@@ -188,6 +188,10 @@ public final class DBConnection {
         
         finally {
         	
+            if (set) {
+               object.setStatementValues(null, data); 
+            }
+            
         	try {
             	connection.close();
         	}
