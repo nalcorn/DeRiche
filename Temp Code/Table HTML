@@ -1,0 +1,34 @@
+
+
+<table cellspacing="0" cellpadding="0" border="0" width="325">
+  <tr>
+    <td>
+       <table cellspacing="0" cellpadding="1" border="1" width="300" >
+         <tr>
+            <th>col 1 heading</th>
+            <th>col 2 heading</th>
+         </tr>
+       </table>
+    </td>
+  </tr>
+  <tr>
+    <td>
+       <div style="width:325px; height:48px; overflow:auto;">
+         <table cellspacing="0" cellpadding="1" border="1" width="300" >
+           <tr>
+             <td>col 1 data 1</td>
+             <td>col 2 data 1</td>
+           </tr>
+           <tr>
+             <td>col 1 data 2</td>
+             <td>col 2 data 2</td>
+           </tr>
+           <tr>
+             <td>col 1 data 3</td>
+             <td>col 2 data 3</td>
+           </tr>
+         </table>  
+       </div>
+    </td>
+  </tr>
+</table>
