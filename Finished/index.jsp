@@ -7,6 +7,7 @@
 <%@page import="java.sql.SQLException"%>
 <%@page import="Business.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!--thos the log in page-->
 <!DOCTYPE html>
 <html>
     <head>
