@@ -26,5 +26,14 @@
                  <input type="reset" name="ClearBtn" value="Clear"> 
             </div>
         </form>
+        <div align="center">
+            <button onclick="myFunction()">Help</button>
+            <script>
+                function myFunction() {
+                    alert(
+                          "1. User types in username and password into the corresponding field provided\n2. User clicks the submit button\n3. User re-enters username and password into the corresponding field provided and clicks submit (Only if username or password are incorrect)\n4. User sees the home page that corresponds to their privilege level");
+                }
+            </script>
+        </div>
     </body>
 </html>
