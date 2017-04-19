@@ -252,21 +252,17 @@ document.bodyForm.lastName.value = document.bodyForm.sigURL.value;
             Patient Last Name:<br>
             <input type="text" name="lastName"><br>
             Explain what happened:<br>
-            <textarea name="what" rows="4" cols="50">
-            </textarea><br>
+            <textarea name="what" rows="4" cols="50"></textarea><br>
             Where did it happen:<br>
             <input type="text" name="where"><br>
             When did it happen:<br>
             <input type="text" name="when"><br>
             Why did it happen:<br>
-            <textarea name="why" rows="4" cols="50">
-            </textarea><br>
+            <textarea name="why" rows="4" cols="50"></textarea><br>
             What did you do? Describe First Aid administered and follow up:<br>
-            <textarea name="firstAid" rows="4" cols="50">
-            </textarea><br>
-            Recommendations for follow up:<br>
-            <textarea  name ="recommend" rows="4" cols="50">
-            </textarea><br>
+            <textarea name="firstAid" rows="4" cols="50"></textarea><br>
+            Recommendations for follow up: (Admin Only)<br>
+            <textarea  name ="recommend" rows="4" cols="50"></textarea><br>
             <div id="sigDiv" style="position: relative; width: 710px; height: 300px;">
               <canvas id="sigLayer2" width="710" height="149" style="position:absolute; top:20px; left:0px; border:2px solid;"></canvas>
               <canvas id="sigLayer1" width="710" height="149" style="position:absolute; top:20px; left:0px; border:2px solid;"></canvas>
@@ -276,6 +272,13 @@ document.bodyForm.lastName.value = document.bodyForm.sigURL.value;
          <input type="hidden" id="picURL" value="">
          <input type="hidden" name="sigURL" id="sigURL" value="">
         </form>
+	<button onclick="myFunction()">Help</button>
+            <script>
+                function myFunction() {
+                    alert(
+                          "1.Click navigation to Create Form page in the left column\n2.Select Body Check Form from drop down menu\n3.Mark on the chart below any abnormities observed\n4.Enter Participant’s name in the field provided (First name and last name) \n5.In the “Explain what happened” section, please type out how Participant received any abnormalities\n6.In the “Where / When” section, please type out Where & When Participant received any abnormalities\n7.In the “What did you do? Describe First Aid administered and follow up” section, please type out exactly what First Aid was administered and what steps were taken to follow up\n8.In the “Recommendations for follow up” section, please type in any recommendations you have for the participant\n9.Enter your name in the field provided\n10.Sign the signature box with the mouse\n11.Select date from the Date Picker\n");
+                }
+            </script>
   <footer>
   Copyright &copy; 2017 2017 DeRiche Agency ,Inc.
     <a href="mailto:email@gmail.com">email@gmail.com</a>
