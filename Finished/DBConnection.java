@@ -6,14 +6,15 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import dataAccess.Accessible;
 
 /**
- * @description The {@link dataAccess.DBConnection} class contains all the methods needed for database access in the DeRiche project.<br>
+ * The {@link dataAccess.DBConnection} class contains all the methods needed for database access in the DeRiche project.<br>
  * Any class accessing a database through {@link dataAccess.DBConnection} will need to either implement {@link dataAccess.Accessible} or extend {@link dataAccess.Access}. Only classes doing one of these two steps will be able to properly call any methods from this class.<br><br>
  *
- * @since 2/23/2017
+ * Date: 2/23/2017
  *
  * @author Cameron Randolph
  * @author Carl Moon
@@ -27,23 +28,23 @@ import dataAccess.Accessible;
 public final class DBConnection {
 
     /**
-     * @description the Select identifier for database operations
+     * The Select identifier for database operations
      */
     public static final char SELECT = 'S';
     /**
-     * @description The Insert identifier for database operations
+     * The Insert identifier for database operations
      */
     public static final char INSERT = 'I';
     /**
-     *@description  The Update identifier for database operations
+     * The Update identifier for database operations
      */
     public static final char UPDATE = 'U';
     /**
-     * @description The Delete identifier for database operations
+     * The Delete identifier for database operations
      */
     public static final char DELETE = 'D';
     /**
-     * @description The database connection
+     * The database connection
      */
     private static String connection = "jdbc:mysql://localhost:3306/deriche";
     /**
@@ -52,15 +53,7 @@ public final class DBConnection {
     private static String driver = "com.mysql.jdbc.Driver";
     
     /**
-     * @description Disallows objects to extend {@link dataAccess.DBConnection}.
-     *
-     */
-    private DBConnection() {
-
-    }
-
-    /**
-     * @description Changes the value of connection from the default.
+     * Changes the value of connection from the default.
      * 
      * @param connection the {@link java.lang.String} representing the new connection
      */
@@ -69,7 +62,7 @@ public final class DBConnection {
     }
     
     /**
-     *@description  Changes the value of driver from the default.
+     * Changes the value of driver from the default.
      * 
      * @param driver the {@link java.lang.String} representing the new driver
      */
@@ -78,7 +71,7 @@ public final class DBConnection {
     }
     
     /**
-     *@description  Returns the value stored in the connection variable.
+     * Returns the value stored in the connection variable.
      * 
      * @return a {@link java.lang.String} representing the database connection
      */
@@ -87,7 +80,7 @@ public final class DBConnection {
     }
     
     /**
-     * @description Returns the value stored in the driver variable.
+     * Returns the value stored in the driver variable.
      * 
      * @return a {@link java.lang.String} representing the database driver
      */
@@ -96,7 +89,7 @@ public final class DBConnection {
     }
     
     /**
-     * @description Handles all select statements required by the DeRiche business objects.<br>
+     * Handles all select statements required by the DeRiche business objects.<br>
      * This method has the ability to select any value from the database described in the establish() method and return it as an {@link java.lang.Object}.
      *
      * @author Carl Moon
@@ -113,7 +106,6 @@ public final class DBConnection {
      * 
      * @throws SQLException if a database access error occurs
      * @throws ClassNotFoundException if the Driver for the database cannot be found
-     *@since 3-21-17.
      */
     public static Object[] selectDB(String sql, String var) throws SQLException, ClassNotFoundException {
         
@@ -143,30 +135,34 @@ public final class DBConnection {
     }
     
     /**
-     * @description Handles all select statements required by the DeRiche business objects.<br>
+     * Handles all select statements required by the DeRiche business objects.<br>
      * This method has the ability to select rows from the database described in the establish() method.
      *
      * @author Carl Moon
      * @author Cameron Randolph
-     *@since 3-22-17
      *
      * @param object the {@link dataAccess.Accessible} object representation of a table in a database for which a select command is to be made
      * @param value the primary key of the table represented by the {@link dataAccess.Accessible} object. Used to set the designated parameter of the {@link java.sql.PreparedStatement}
+     * @param column the index of the column in the database to be selected from
+     * @param determines whether or not the values of {@link dataAccess.Accessible} object passed will be set to the values retrieved from the database
      *
      * @return an {@link java.lang.Object} array holding all values selected from the database
      */
-    public static Object[] select(Accessible object, Object value, boolean set) {
+    public static Object[][] select(Accessible object, Object value, int column, boolean set) {
     	
         int columnCount;
         
+        ArrayList<Object[]> rows = new ArrayList<Object[]>();
+        
         Object[] data = null;
+        Object[][] finalData = null;
         Connection connection = null;
         PreparedStatement statement = null;
         ResultSet resultSet = null;
         
         try {
             connection = establish();
-            statement = connection.prepareStatement(generateSQL(object, SELECT));
+            statement = connection.prepareStatement(generateSQL(object, column, SELECT));
             statement.setObject(1, value);
             resultSet = statement.executeQuery();
             
@@ -177,6 +173,20 @@ public final class DBConnection {
                 for (int i = 0; i < columnCount; i++) {
                     data[i] = resultSet.getObject(i + 1);
                 }
+                
+                rows.add(data);
+                
+                data = new Object[columnCount];
+            }
+            
+            finalData = new Object[rows.size()][columnCount];
+            
+            for (int i = 0; i < rows.size(); i++) {
+            	finalData[i] = rows.get(i);
+            }
+            
+            if (set && rows.size() == 1) {
+            	object.setStatementValues(null, finalData[0]);
             }
             
             connection.close();
@@ -188,10 +198,6 @@ public final class DBConnection {
         
         finally {
         	
-            if (set) {
-               object.setStatementValues(null, data); 
-            }
-            
         	try {
             	connection.close();
         	}
@@ -201,18 +207,18 @@ public final class DBConnection {
         	}
         }
         
-        return data;
+        return finalData;
     }
     
     /**
-     * @description Handles all insert statements required by the DeRiche business objects.<br>
+     * Handles all insert statements required by the DeRiche business objects.<br>
      * This method has the ability to insert rows into the database described in the establish() method.
      *
      * @author Cameron Randolph
-     *@since 3-22-17.
      *
      * @param object the {@link dataAccess.Accessible} object representation of a table in a database for which an insert command is to be made
      * @param values the values to be added to the {@link java.sql.PreparedStatement} as designated parameters
+     * @param determines whether or not the values of {@link dataAccess.Accessible} object passed will be set to the values retrieved from the database
      *
      * @return an int representing whether or not the database was successfully updated
      * 
@@ -226,11 +232,12 @@ public final class DBConnection {
 
         try {
             connection = establish();
-            statement = connection.prepareStatement(generateSQL(object, INSERT));
+            statement = connection.prepareStatement(generateSQL(object, -1, INSERT));
             statement = object.setStatementValues(statement, values);
             if (statement == null) {
             	throw new StatementValuesNotImplementedException();
             }
+
             executed = statement.executeUpdate();
             
             connection.close();
@@ -256,18 +263,17 @@ public final class DBConnection {
     
     /**
      * Handles all update statements required by the DeRiche business objects.<br>
-     * @description This method has the ability to update rows in the database described in the establish() method.
+     * This method has the ability to update rows in the database described in the establish() method.
      * 
      * @param object the {@link dataAccess.Accessible} object representation of a table in a database for which a delete command is to be made
      * @param value the primary key of the table represented by the {@link dataAccess.Accessible} object. Used to set the designated parameter of the {@link java.sql.PreparedStatement}
+     * @param column the index of the column in the database to be selected from
      * 
      * @return an int representing whether or not the database was successfully updated
      * 
-     * @throws SQLException if a database access error occurs
-     * @throws ClassNotFoundException if the Driver for the database cannot be found
      * @throws StatementValuesNotImplementedException if the {@link dataAccess.Accessible} object has not properly implemented the setStatementValues(PreparedStatement, Object[]) method
      */
-    public static int update(Accessible object, Object value) throws StatementValuesNotImplementedException {
+    public static int update(Accessible object, Object value, int column) throws StatementValuesNotImplementedException {
     	
         int executed = 0;
         Connection connection = null;
@@ -275,8 +281,9 @@ public final class DBConnection {
         
         try {
             connection = establish();
-            statement = connection.prepareStatement(generateSQL(object, UPDATE));
+            statement = connection.prepareStatement(generateSQL(object, column, UPDATE));
             statement = object.setStatementValues(statement, null);
+            statement.setObject(object.getClass().getDeclaredFields().length, value);
             if (statement == null) {
             	throw new StatementValuesNotImplementedException();
             }
@@ -303,18 +310,16 @@ public final class DBConnection {
     }
     
     /**
-     * @descrtiption Handles all delete statements required by the DeRiche business objects.<br>
-     * @description This method has the ability to delete rows in the database described in the establish() method.
+     * Handles all delete statements required by the DeRiche business objects.<br>
+     * This method has the ability to delete rows in the database described in the establish() method.
      * 
      * @param object the {@link dataAccess.Accessible} object representation of a table in a database for which an update command is to be made
      * @param value the primary key of the table represented by the {@link dataAccess.Accessible} object. Used to set the designated parameter of the {@link java.sql.PreparedStatement}
+     * @param column the index of the column in the database to be selected from
      * 
      * @return an int representing whether or not the database was successfully updated
-     * 
-     * @throws SQLException if a database access error occurs
-     * @throws ClassNotFoundException if the Driver for the database cannot be found
      */
-    public static int delete(Accessible object, Object value) throws SQLException, ClassNotFoundException {
+    public static int delete(Accessible object, Object value, int column) {
     	
         int executed = 0;
         Connection connection = null;
@@ -322,7 +327,7 @@ public final class DBConnection {
         
         try {
             connection = establish();
-            statement = connection.prepareStatement(generateSQL(object, DELETE));
+            statement = connection.prepareStatement(generateSQL(object, column, DELETE));
             statement.setObject(1, value);
             executed = statement.executeUpdate();
             connection.close();
@@ -347,14 +352,14 @@ public final class DBConnection {
     }
 
     /**
-     * @description Generates SQL commands for the {@link dataAccess.Accessible} object passed as a parameter.
+     * Generates SQL commands for the {@link dataAccess.Accessible} object passed as a parameter.
      * 
      * @param object the {@link dataAccess.Accessible} object representation of a table in a database for which an SQL statement is to be made
      * @param var the char representation of the type of action to be taken when invoking this method
      * 
      * @return a {@link java.lang.String} representation of the SQL command
      */
-    public static String generateSQL(Accessible object, char var) {
+    public static String generateSQL(Accessible object, int column, char var) {
 
     	if (var == 'S') {
     		
@@ -362,7 +367,7 @@ public final class DBConnection {
             String sql;
             
             fields = object.getClass().getDeclaredFields();
-            sql = "Select * From " + object.getClass().getSimpleName() + " Where " + fields[object.getPrimaryKeyIndex()].getName() + " = ?";
+            sql = "Select * From " + object.getClass().getSimpleName() + " Where " + fields[column].getName() + " = ?";
             
             return sql + ";";
     		
@@ -402,7 +407,7 @@ public final class DBConnection {
                 if (i < fields.length - 1) {
                     sql += fields[i].getName() + " = ?, ";
                 } else {
-                	sql += fields[i].getName() + " = ? Where " + fields[object.getPrimaryKeyIndex()].getName() + " = ?";
+                	sql += fields[i].getName() + " = ? Where " + fields[column].getName() + " = ?";
                 }
     	    }
 
@@ -414,7 +419,7 @@ public final class DBConnection {
             String sql;
             
             fields = object.getClass().getDeclaredFields();
-            sql = "Delete From " + object.getClass().getSimpleName() + " Where " + fields[object.getPrimaryKeyIndex()].getName() + " = ?";
+            sql = "Delete From " + object.getClass().getSimpleName() + " Where " + fields[column].getName() + " = ?";
             
             return sql + ";";
         	
@@ -424,8 +429,8 @@ public final class DBConnection {
     }
     
     /**
-     * @description Retrieves the class name from the object passed to it.<br>
-     * @description This method only gives the name of the class. Any packages listed in the full class name are removed from the return value.
+     * Retrieves the class name from the object passed to it.<br>
+     * This method only gives the name of the class. Any packages listed in the full class name are removed from the return value.
      *
      * @return a {@link java.lang.String} representing the name of the class
      * 
@@ -446,7 +451,7 @@ public final class DBConnection {
     }
     
     /**
-     * @description Establishes a connection to the DeRiche database for every method in the {@link dataAccess.DBConnection} class.
+     * Establishes a connection to the DeRiche database for every method in the {@link dataAccess.DBConnection} class.
      *
      * @return a {@link java.sql.Connection} already linked to the DeRiche database
      * 
@@ -455,12 +460,12 @@ public final class DBConnection {
      */
     public static Connection establish() throws SQLException, ClassNotFoundException {
         Class.forName(driver);
-        Connection connection = DriverManager.getConnection(DBConnection.connection, "root", "password");
+        Connection connection = DriverManager.getConnection(DBConnection.connection);
         return connection;    
     }
     
     /**
-     *@description  Thrown to indicate that the overridden setStatementValues method from {@link dataAccess.Accessible} is not properly implemented.
+     * Thrown to indicate that the overridden setStatementValues method from {@link dataAccess.Accessible} is not properly implemented.
      * 
      * @author Cameron Randolph
      */
