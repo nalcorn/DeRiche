@@ -127,8 +127,8 @@ document.bodyForm.firstName.value = document.bodyForm.picURL.value;
         saveSig();
     }
 
-    function speak() {
-        alert(canvas.getBoundingClientRect().top + " - ");
+    function Pclear() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
     }
     
     function findxy(res, e) {
@@ -240,12 +240,13 @@ document.bodyForm.lastName.value = document.bodyForm.sigURL.value;
         <div id="canvasDiv" style="position: relative; width: 673px; height: 614px;">
           <canvas id="layer2" width="673" height="514" style="position: absolute; top: 18px; left: 0px; border:2px solid;"></canvas>
           <canvas id="layer1" width="673" height="514" style="position: absolute; top: 18px; left: 0px; border:2px solid;"></canvas>
-          <div style="position: absolute; top: 540px; left: 0px; width: 150px; height: 50px; border:2px solid;">
+          <div style="position: absolute; top: 540px; left: 0px; width: 250px; height: 50px; border:2px solid;">
           <div style="position:absolute;top:4px;left:10px;">Color</div>
           <div style="position:absolute;top:24px;left:10px;width:15px;height:15px;background:black;" id="black" onclick="color(this)"></div>
           <div style="position:absolute;top:24px;left:25px;width:15px;height:15px;background:blue;" id="blue" onclick="color(this)"></div>
           <div style="position:absolute;top:4px;left:90px;">Eraser</div>
           <div style="position:absolute;top:24px;left:90px;width:15px;height:15px;background:white;border:1px solid;" id="white" onclick="color(this)"></div>
+          <input type="button" value="Clear Picture" style="position:absolute; top:12px; left:150px; background:white; border:2px solid;" onclick="Pclear()">
           </div>
         </div>
         <form id="bodyForm" name="bodyForm" style="padding-top: 40px;">
