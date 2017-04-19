@@ -50,7 +50,7 @@ public abstract class Access implements Accessible {
     				}
     				
     				if (values != null) {
-        				fields[i].set(this, values[i].toString());
+        				fields[i].set(this, values[i] + "");
     				}
     			}
     			
@@ -58,8 +58,6 @@ public abstract class Access implements Accessible {
     			for (int i = 1; i < fields.length; i++) {
     				statement.setObject(i, fields[i].get(this));
     			}
-    			
-    			statement.setObject(fields.length, fields[this.getPrimaryKeyIndex()].get(this));
             }
             
             closeFields(fields);
