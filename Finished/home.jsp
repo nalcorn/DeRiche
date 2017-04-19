@@ -18,15 +18,13 @@
   </header>
  
   <nav>
-  <ul> 
-    <li><a href="index.html">Home</a></li>
-		
-	 <li><a href="formRetrieval.html">Form Retieval</a></li>
-	  <li><a href="link1.html">to be completed</a></li>
-	<li><a href="link2.html">to be completed</a></li>
-	<li><a href="link3.html">to be coompeted</a></li>
-	<li><a href="AboutUs.html">About US</a></li>
-	<li><a href="contact.html">Contact US</a></li>
+  <ul> 	
+    <li><a href="home.jsp">Home</a></li>
+    <li><a href="createForm.jsp"></a>Create Form</li>
+    <li><a href="formRetrieval.jsp">Retieve Form</a></li>
+    <li><a href="link3.html">to be coompeted</a></li>
+    <li><a href="AboutUs.html">About US</a></li>
+    <li><a href="contact.html">Contact US</a></li>
   </ul>
   </nav>
   <main>
