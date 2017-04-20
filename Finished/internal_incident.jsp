@@ -1,3 +1,6 @@
+<%-- 
+    Author     : Trevor Bal
+--%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -225,7 +228,7 @@ document.bodyForm.lastName.value = document.bodyForm.sigURL.value;
     </header>
     <nav>
         <ul> 
-        <li><a href="index.jsp">Home</a></li>
+        <li><a href="home.jsp">Home</a></li>
 	<li><a href="#">Create Form</a></li>
             <ul class="nav-dropdown">
                 <li><a href="bodycheck.jsp">Body Check</a></li>
@@ -353,6 +356,7 @@ document.bodyForm.lastName.value = document.bodyForm.sigURL.value;
           <div style="position:absolute;top:24px;left:25px;width:15px;height:15px;background:blue;" id="blue" onclick="color(this)"></div>
           <div style="position:absolute;top:4px;left:90px;">Eraser</div>
           <div style="position:absolute;top:24px;left:90px;width:15px;height:15px;background:white;border:1px solid;" id="white" onclick="color(this)"></div>
+          <input type="button" value="Clear Picture" style="position:absolute; top:12px; left:150px; background:white; border:2px solid;" onclick="Pclear()">
           </div>
         </div>
         <p>Other Person(s) Involved Participant, Staff, Visitor, please use first name or initials only:</p>
