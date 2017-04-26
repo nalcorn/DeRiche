@@ -468,7 +468,7 @@ public final class DBConnection {
      */
     public static Connection establish() throws SQLException, ClassNotFoundException {
         Class.forName(driver);
-        Connection connection = DriverManager.getConnection(DBConnection.connection);
+        Connection connection = DriverManager.getConnection(DBConnection.connection, "root", "password");
         return connection;    
     }
     
