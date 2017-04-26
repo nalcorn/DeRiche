@@ -144,11 +144,12 @@ public final class DBConnection {
      * @param object the {@link dataAccess.Accessible} object representation of a table in a database for which a select command is to be made
      * @param value the primary key of the table represented by the {@link dataAccess.Accessible} object. Used to set the designated parameter of the {@link java.sql.PreparedStatement}
      * @param column the index of the column in the database to be selected from
-     * @param determines whether or not the values of {@link dataAccess.Accessible} object passed will be set to the values retrieved from the database
+     * @param negate changes the "=" operator to "<>" in for the "WHERE" clause of the SQL statement
+     * @param set determines whether or not the values of {@link dataAccess.Accessible} object passed will be set to the values retrieved from the database
      *
      * @return an {@link java.lang.Object} array holding all values selected from the database
      */
-    public static Object[][] select(Accessible object, Object value, int column, boolean set) {
+    public static Object[][] select(Accessible object, Object value, int column, boolean negate, boolean set) {
     	
         int columnCount;
         
@@ -161,8 +162,15 @@ public final class DBConnection {
         ResultSet resultSet = null;
         
         try {
+            
+            String sql = generateSQL(object, column, SELECT);
+            
+            if (negate) {
+                sql.replace("=", "<>");
+            }
+            
             connection = establish();
-            statement = connection.prepareStatement(generateSQL(object, column, SELECT));
+            statement = connection.prepareStatement();
             statement.setObject(1, value);
             resultSet = statement.executeQuery();
             
