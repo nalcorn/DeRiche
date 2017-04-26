@@ -166,7 +166,7 @@ public final class DBConnection {
             String sql = generateSQL(object, column, SELECT);
             
             if (negate) {
-                sql.replace("=", "<>");
+                sql = sql.replace("=", "<>");
             }
             
             connection = establish();
