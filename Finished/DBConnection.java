@@ -170,7 +170,7 @@ public final class DBConnection {
             }
             
             connection = establish();
-            statement = connection.prepareStatement();
+            statement = connection.prepareStatement(sql);
             statement.setObject(1, value);
             resultSet = statement.executeQuery();
             
