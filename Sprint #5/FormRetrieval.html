@@ -1,0 +1,33 @@
+try {
+    HttpSession s1 = request.getSession();
+
+    User user = s1.getAttribute("user");
+
+    Object[][] forms = DBConnection.select(new Forms(), "-10", 6, true, false);
+
+    if (user.getClearance().equals("1")) {
+
+        for (int i = 0; i < forms.length; i++) {
+            if (forms[i][1].equals(user.getUserID()) && forms[i][6].equals("1")) {
+                //Write HTML table row
+            }
+        }
+
+    } else if (user.getClearance().equals("2")) {
+
+        for (int i = 0; i < forms.length; i++) {
+            if (forms[i][6].equals("2")) {
+                //Write HTML table row
+            }
+        }
+    } else {
+
+        for (int i = 0; i < forms.length; i++) {
+            //Write HTML table row
+        }
+    }
+}
+
+catch (Exception ex) {
+    ex.printStackTrace();
+}
