@@ -282,7 +282,7 @@ document.bodyForm.lastName.value = document.bodyForm.sigURL.value;
             Select the date:<br>
             <input type="date" name="date"><br><br>
          <input type="submit" onClick="save()" value="Submit"/>  <input type="reset" value="Clear"/>
-         <input type="hidden" id="picURL" value="">
+         <input type="hidden" name="picURL" id="picURL" value="">
          <input type="hidden" name="sigURL" id="sigURL" value=""><br>
         </form><br>
 	<button onclick="myFunction()">Help</button>
