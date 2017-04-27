@@ -15,7 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author crandol5
+ * @author Carl Moon
+ * @author Cameron Randolph
  */
 @WebServlet(name = "BodyCheckServlet", urlPatterns = {"/BodyCheckServlet"})
 public class BodyCheckServlet extends HttpServlet {
@@ -32,9 +33,6 @@ public class BodyCheckServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-        HttpSession session;
-        User user;
-
         String canvasData;
         String sigData;
         String firstName;
@@ -46,8 +44,8 @@ public class BodyCheckServlet extends HttpServlet {
         String firstAid;
         String recommend;
         
-        canvasData = request.getParameter("canvasData");
-        sigData = request.getParameter("sigData");
+        canvasData = request.getParameter("picURL");
+        sigData = request.getParameter("sigURL");
         firstName = request.getParameter("firstName");
         lastName = request.getParameter("lastName");
         what = request.getParameter("what");
@@ -57,38 +55,23 @@ public class BodyCheckServlet extends HttpServlet {
         firstAid = request.getParameter("firstAid");
         recommend = request.getParameter("recommend");
         
-        DFNDocument doc = new DFNDocument("newFile.dfn", DFNDocument.BODY_CHECK);
-        doc.setParameter("CANVASURI", "canvasData");
-        doc.setParameter("SIGURI", "sigData");
-        doc.setParameter("FIRSTNAME", "firstName");
-        doc.setParameter("LASTNAME", "lastName");
-        doc.setParameter("WHAT", "what");
-        doc.setParameter("WHERE", "where");
-        doc.setParameter("WHEN", "when");
-        doc.setParameter("WHY", "why");
-        doc.setParameter("FIRSTAID", "firstAid");
-        doc.setParameter("RECOMMEND", "recommend");
-        doc.write();
+        FormInfo info = new FormInfo(FormInfo.BODY_CHECK);
+        info.setValues(new String[] {canvasData, sigData, firstName, lastName, what, where, when, why, firstAid, recommend});
+
+        User user;
 
         try {
-            session = request.getSession();
+            HttpSession session = request.getSession();
             user = (User)session.getAttribute("user");
         }
 
-        catch (Exception ex) {
+        catch(Exception ex) {
             ex.printStackTrace();
         }
 
-        Calendar cal = new Calendar();
+        Forms form = new Forms();
+        form.insertDB(user.getUserId(), "7", "BODY_CHECK", info.encode(), "Date Goes Here :D", "1");
 
-        Forms form = new Form();
-        form.insert(new Object[] {"FID000000014", user.getUserID(), request.getParameter("patId"), "BODY_CHECK", doc.getFile(), cal.get(Calendar.YEAR) + "-" + cal.get(Calendar.MONTH) + "-" + cal.get(Calendar.DATE), "1"});
-
-        user.finalize();
-        doc.finalize();
-        form.finalize();
-        cal.finalize();
-        
         RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp");
         dispatcher.forward(request, response);
     }
