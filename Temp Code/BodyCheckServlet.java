@@ -72,7 +72,7 @@ public class BodyCheckServlet extends HttpServlet {
         Forms form = new Forms();
         form.insertDB(user.getUserId(), "7", "BODY_CHECK", info.encode(), "Date Goes Here :D", "1");
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("dhome.jsp");
         dispatcher.forward(request, response);
     }
 
