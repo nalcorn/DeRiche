@@ -340,7 +340,7 @@ document.bodyForm.lastName.value = document.bodyForm.sigURL.value;
   </header>
   <nav>
   <ul> 
-        <li><a href="index.jsp">Home</a></li>
+        <li><a href="dbhome.jsp">Home</a></li>
 	<li><a href="#">Create Form</a></li>
             <ul class="nav-dropdown">
                 <li><a href="bodycheck.jsp">Body Check</a></li>
