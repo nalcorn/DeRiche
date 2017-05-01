@@ -346,8 +346,8 @@ document.bodyForm.lastName.value = document.bodyForm.sigURL.value;
                 <li><a href="bodycheck.jsp">Body Check</a></li>
                 <li><a href="internal_incident.jsp">Internal Incident</a></li>
             </ul>
-	<li><a href="link1.html">Retrieve Form</a></li>
-	<li><a href="AboutUs.html">About US</a></li>
+	<li><a href="formretrieval.jsp">Retrieve Form</a></li>
+	<li><a href="#">About US</a></li>
 	<li><a href="contact.html">Contact US</a></li>
   </ul>
   </nav>
