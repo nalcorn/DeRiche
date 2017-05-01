@@ -32,7 +32,7 @@
             </ul>
 	<li><a href="formretrieval.jsp">Retrieve Form</a></li>
 	<li><a href="#">About US</a></li>
-	<li><a href="contact.jsp">Contact US</a></li>
+	<li><a href="contact.html">Contact US</a></li>
   </ul>
   </nav>
   <main>
