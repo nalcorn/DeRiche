@@ -17,14 +17,17 @@
 	
   </header>
  
-  <nav>
-  <ul> 	
-    <li><a href="dhome.jsp">Home</a></li>
-    <li><a href="bodycheck.jsp">Body Check</a></li>
-    <li><a href="FormRetrieval.jsp">Retieve Form</a></li>
-    <li><a href="link3.html">to be coompeted</a></li>
-    <li><a href="AboutUs.html">About US</a></li>
-    <li><a href="contact.html">Contact US</a></li>
+    <nav>
+  <ul> 
+        <li><a href="dbhome.jsp">Home</a></li>
+	<li><a href="#">Create Form</a></li>
+            <ul class="nav-dropdown">
+                <li><a href="bodycheck.jsp">Body Check</a></li>
+                <li><a href="internal_incident.jsp">Internal Incident</a></li>
+            </ul>
+	<li><a href="formretrieval.jsp">Retrieve Form</a></li>
+	<li><a href="#">About US</a></li>
+	<li><a href="contact.html">Contact US</a></li>
   </ul>
   </nav>
   <main>
