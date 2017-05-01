@@ -22,8 +22,7 @@
     <li><a href="home.jsp">Home</a></li>
     <li><a href="createForm.jsp"></a>Create Form</li>
     <li><a href="formRetrieval.jsp">Retieve Form</a></li>
-    <li><a href="link3.html">to be coompeted</a></li>
-    <li><a href="AboutUs.html">About US</a></li>
+    <li><a href="#">About US</a></li>
     <li><a href="contact.html">Contact US</a></li>
   </ul>
   </nav>
